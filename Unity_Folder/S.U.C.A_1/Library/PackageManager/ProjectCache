@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637594673057278684
+      ticks: 637594715380681065
     m_Hash: 2962897182
   m_LockFileStatus:
     m_FilePath: C:/Users/nazar/OneDrive/Documents/GitHub/S.U.C.A_3.0/Unity_Folder/S.U.C.A_1/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637594673057288666
+      ticks: 637594715380691045
     m_Hash: 989245111
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
