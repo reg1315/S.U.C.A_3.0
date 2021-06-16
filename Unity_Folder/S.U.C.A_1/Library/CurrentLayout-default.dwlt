@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 84
+  controlID: 133
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 85
+  controlID: 21
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 86
+  controlID: 112
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -715,23 +715,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1166
-      height: 602
-    m_Scale: {x: 0.8361111, y: 0.8361111}
-    m_Translation: {x: 583, y: 301}
+      height: 623
+    m_Scale: {x: 0.86527777, y: 0.86527777}
+    m_Translation: {x: 583, y: 311.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -697.27576
+      x: -673.7721
       y: -360
-      width: 1394.5515
+      width: 1347.5442
       height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 0.8361111
+  m_defaultScale: 0.86527777
   m_LastWindowPixelSize: {x: 1166, y: 623}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
