@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Xiaomi/GitHub/S.U.C.A_3.0/Unity_Folder/S.U.C.A_1/Packages/manifest.json
+    m_FilePath: C:/Users/nazar/OneDrive/Documents/GitHub/S.U.C.A_3.0/Unity_Folder/S.U.C.A_1/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,7 +8,7 @@ m_ProjectFiles:
       ticks: 637594715380681065
     m_Hash: 2962897182
   m_LockFileStatus:
-    m_FilePath: C:/Users/Xiaomi/GitHub/S.U.C.A_3.0/Unity_Folder/S.U.C.A_1/Packages/packages-lock.json
+    m_FilePath: C:/Users/nazar/OneDrive/Documents/GitHub/S.U.C.A_3.0/Unity_Folder/S.U.C.A_1/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -25,16 +25,16 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.5.7
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.collab-proxy@1.5.7
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.collab-proxy@1.5.7
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
       author:
-        name:
-        email:
-        url:
+        name: 
+        email: 
+        url: 
       category: Editor
-      type:
+      type: 
       description: The Version Control package gives you the ability to use either
         Collaborate or Plastic SCM for Unity (beta) in the Unity editor. To use Plastic
         SCM for Unity (beta), a Plastic SCM subscription is required. Learn more
@@ -60,7 +60,6 @@ m_PackageAssets:
         - 1.3.7
         - 1.3.8
         - 1.3.9
-        - 1.4.9
         - 1.5.7
         - 2.0.0-preview.6
         - 2.0.0-preview.8
@@ -104,7 +103,7 @@ m_PackageAssets:
       - backup
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -114,29 +113,29 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637551413290000000
-      documentationUrl:
+      datePublishedTicks: 0
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
         revision: f079d307344f568804d3ea6d781013135e614e45
-        path:
+        path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
       author:
-        name:
-        email:
-        url:
-      category:
-      type:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
       description: The JetBrains Rider Editor package provides an integration for
         using the JetBrains Rider IDE as a code editor for Unity. It adds support
         for generating .csproj files for code completion and auto-discovery of installations.
@@ -166,9 +165,6 @@ m_PackageAssets:
         - 3.0.2
         - 3.0.3
         - 3.0.4
-        - 3.0.5
-        - 3.0.6
-        - 3.0.7
         compatible:
         - 1.0.2
         - 1.0.6
@@ -192,9 +188,6 @@ m_PackageAssets:
         - 3.0.2
         - 3.0.3
         - 3.0.4
-        - 3.0.5
-        - 3.0.6
-        - 3.0.7
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -211,7 +204,7 @@ m_PackageAssets:
       keywords: []
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -222,28 +215,28 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 637334461080000000
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
         revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
-        path:
+        path: 
     - packageId: com.unity.ide.visualstudio@2.0.8
       testable: 0
       isDirectDependency: 1
       version: 2.0.8
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ide.visualstudio@2.0.8
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ide.visualstudio@2.0.8
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
       author:
-        name:
-        email:
-        url:
-      category:
-      type:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
       description: Code editor integration for supporting Visual Studio as code editor
         for unity. Adds support for generating csproj files for intellisense purposes,
         auto discovery of installations, etc.
@@ -251,36 +244,10 @@ m_PackageAssets:
       errors: []
       versions:
         all:
-        - 1.0.2
-        - 1.0.3
-        - 1.0.4
-        - 1.0.9
-        - 1.0.10
-        - 1.0.11
-        - 2.0.0
-        - 2.0.1
-        - 2.0.2
-        - 2.0.3
-        - 2.0.5
-        - 2.0.7
         - 2.0.8
-        - 2.0.9
         compatible:
-        - 1.0.2
-        - 1.0.3
-        - 1.0.4
-        - 1.0.9
-        - 1.0.10
-        - 1.0.11
-        - 2.0.0
-        - 2.0.1
-        - 2.0.2
-        - 2.0.3
-        - 2.0.5
-        - 2.0.7
         - 2.0.8
-        - 2.0.9
-        verified: 2.0.9
+        verified: 2.0.8
       dependencies:
       - name: com.unity.test-framework
         version: 1.1.9
@@ -296,7 +263,7 @@ m_PackageAssets:
       keywords: []
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -306,29 +273,29 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637562620210000000
-      documentationUrl:
+      datePublishedTicks: 0
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
         revision: 5cdf5d932e6ecbbd83bbe6a40eec2a94b4979501
-        path:
+        path: 
     - packageId: com.unity.ide.vscode@1.2.3
       testable: 0
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
       author:
-        name:
-        email:
-        url:
-      category:
-      type:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
       description: Code editor integration for supporting Visual Studio Code as code
         editor for unity. Adds support for generating csproj files for intellisense
         purposes, auto discovery of installations, etc.
@@ -365,7 +332,7 @@ m_PackageAssets:
       keywords: []
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -376,28 +343,28 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 637394922300000000
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
-        path:
+        path: 
     - packageId: com.unity.postprocessing@3.1.0
       testable: 0
       isDirectDependency: 1
       version: 3.1.0
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.postprocessing@3.1.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.postprocessing@3.1.0
       assetPath: Packages/com.unity.postprocessing
       name: com.unity.postprocessing
       displayName: Post Processing
       author:
-        name:
-        email:
-        url:
-      category:
-      type:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
       description: The post-processing stack (v2) comes with a collection of effects
         and image filters you can apply to your cameras to improve the visuals of
         your games.
@@ -435,16 +402,12 @@ m_PackageAssets:
         - 2.2.2
         - 2.3.0
         - 3.0.1
-        - 3.0.3
         - 3.1.0
-        - 3.1.1
         compatible:
         - 2.3.0
         - 3.0.1
-        - 3.0.3
         - 3.1.0
-        - 3.1.1
-        verified: 3.1.1
+        verified: 3.1.0
       dependencies:
       - name: com.unity.modules.physics
         version: 1.0.0
@@ -454,7 +417,7 @@ m_PackageAssets:
       keywords: []
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -464,29 +427,29 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637504209320000000
-      documentationUrl:
+      datePublishedTicks: 0
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: git+https://github.com/Unity-Technologies/Graphics.git
+        url: https://github.com/Unity-Technologies/Graphics.git
         revision: c3233d84609fb4c1da8b0f1ea07d0b6c75f8c114
-        path:
+        path: 
     - packageId: com.unity.test-framework@1.1.24
       testable: 0
       isDirectDependency: 1
       version: 1.1.24
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.test-framework@1.1.24
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.test-framework@1.1.24
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
       author:
-        name:
-        email:
-        url:
+        name: 
+        email: 
+        url: 
       category: Unity Test Framework
-      type:
+      type: 
       description: Test framework for running Edit mode and Play mode tests in Unity.
       status: 4
       errors: []
@@ -520,13 +483,9 @@ m_PackageAssets:
         - 1.1.20
         - 1.1.22
         - 1.1.24
-        - 1.1.26
-        - 1.1.27
         compatible:
         - 1.1.24
-        - 1.1.26
-        - 1.1.27
-        verified: 1.1.27
+        verified: 1.1.24
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -546,7 +505,7 @@ m_PackageAssets:
       - TestFramework
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -556,29 +515,29 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637505702940000000
-      documentationUrl:
+      datePublishedTicks: 0
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
+        url: https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: e6fe8892689398c0d9aba4587e0ba69edc3d82b8
-        path:
+        path: 
     - packageId: com.unity.textmeshpro@3.0.6
       testable: 0
       isDirectDependency: 1
       version: 3.0.6
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.textmeshpro@3.0.6
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.textmeshpro@3.0.6
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
       author:
-        name:
-        email:
-        url:
+        name: 
+        email: 
+        url: 
       category: Text Rendering
-      type:
+      type: 
       description: 'TextMeshPro is the ultimate text solution for Unity. It''s the
         perfect replacement for Unity''s UI Text and the legacy Text Mesh.
 
@@ -639,9 +598,6 @@ m_PackageAssets:
         - 1.5.0
         - 1.5.1
         - 1.5.3
-        - 1.5.4
-        - 1.5.5
-        - 1.5.6
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.1
@@ -660,9 +616,6 @@ m_PackageAssets:
         - 2.1.0
         - 2.1.1
         - 2.1.3
-        - 2.1.4
-        - 2.1.5
-        - 2.1.6
         - 3.0.0-preview.1
         - 3.0.0-preview.3
         - 3.0.0-preview.4
@@ -677,8 +630,6 @@ m_PackageAssets:
         - 3.0.0
         - 3.0.1
         - 3.0.3
-        - 3.0.4
-        - 3.0.5
         - 3.0.6
         compatible:
         - 3.0.6
@@ -701,7 +652,7 @@ m_PackageAssets:
       - SDF
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -711,29 +662,29 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637547111200000000
-      documentationUrl:
+      datePublishedTicks: 0
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
         revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
-        path:
+        path: 
     - packageId: com.unity.timeline@1.4.8
       testable: 0
       isDirectDependency: 1
       version: 1.4.8
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.timeline@1.4.8
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.timeline@1.4.8
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
       author:
-        name:
-        email:
-        url:
-      category:
-      type:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
       description: Use Unity Timeline to create cinematic content, game-play sequences,
         audio sequences, and complex particle effects.
       status: 4
@@ -784,7 +735,6 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
-        - 1.4.7
         - 1.4.8
         - 1.5.0-pre.2
         - 1.5.0-preview.1
@@ -796,12 +746,7 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
-        - 1.5.4
-        - 1.5.5
         - 1.6.0-pre.1
-        - 1.6.0-pre.3
-        - 1.6.0-pre.4
-        - 1.6.0-pre.5
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -814,12 +759,7 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
-        - 1.5.4
-        - 1.5.5
         - 1.6.0-pre.1
-        - 1.6.0-pre.3
-        - 1.6.0-pre.4
-        - 1.6.0-pre.5
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -847,7 +787,7 @@ m_PackageAssets:
       - tools
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -857,29 +797,29 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637557616100000000
-      documentationUrl:
+      datePublishedTicks: 0
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
         revision: 527e4364e28028f20f04fc51db671eb4bb910a26
-        path:
+        path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ugui@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ugui@1.0.0
       assetPath: Packages/com.unity.ugui
       name: com.unity.ugui
       displayName: Unity UI
       author:
-        name:
-        email:
-        url:
-      category:
-      type:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
       description: "Unity UI is a UI toolkit for developing user interfaces for games
         and applications. It is a GameObject-based UI system that uses Components
         and the Game View to arrange, position, and style user interfaces. \u200B
@@ -909,9 +849,9 @@ m_PackageAssets:
       - Unity UI
       - Canvas
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -921,27 +861,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.ai@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.ai@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.ai@1.0.0
       assetPath: Packages/com.unity.modules.ai
       name: com.unity.modules.ai
       displayName: AI
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The AI module implements the path finding features in Unity.
         Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.AIModule.html'
@@ -957,9 +897,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -969,27 +909,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.androidjni@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.androidjni@1.0.0
       assetPath: Packages/com.unity.modules.androidjni
       name: com.unity.modules.androidjni
       displayName: Android JNI
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'AndroidJNI module allows you to call Java code. Scripting API:
         https://docs.unity3d.com/ScriptReference/UnityEngine.AndroidJNIModule.html'
@@ -1005,9 +945,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1017,27 +957,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.animation@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.animation@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.animation@1.0.0
       assetPath: Packages/com.unity.modules.animation
       name: com.unity.modules.animation
       displayName: Animation
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Animation module implements Unity''s animation system. Scripting
         API: https://docs.unity3d.com/ScriptReference/UnityEngine.AnimationModule.html'
@@ -1053,9 +993,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1065,27 +1005,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.assetbundle@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
       assetPath: Packages/com.unity.modules.assetbundle
       name: com.unity.modules.assetbundle
       displayName: Asset Bundle
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The AssetBundle module implements the AssetBundle class and related
         APIs to load data from AssetBundles. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.AssetBundleModule.html'
@@ -1101,9 +1041,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1113,27 +1053,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.audio@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.audio@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.audio@1.0.0
       assetPath: Packages/com.unity.modules.audio
       name: com.unity.modules.audio
       displayName: Audio
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Audio module implements Unity''s audio system. Scripting
         API: https://docs.unity3d.com/ScriptReference/UnityEngine.AudioModule.html'
@@ -1149,9 +1089,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1161,27 +1101,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.cloth@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.cloth@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.cloth@1.0.0
       assetPath: Packages/com.unity.modules.cloth
       name: com.unity.modules.cloth
       displayName: Cloth
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Cloth module implements cloth physics simulation through
         the Cloth component. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.ClothModule.html'
@@ -1201,9 +1141,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1213,27 +1153,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.director@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.director@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.director@1.0.0
       assetPath: Packages/com.unity.modules.director
       name: com.unity.modules.director
       displayName: Director
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Director module implements the PlayableDirector class. Scripting
         API: https://docs.unity3d.com/ScriptReference/UnityEngine.DirectorModule.html'
@@ -1257,9 +1197,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1269,27 +1209,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.imageconversion@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
       assetPath: Packages/com.unity.modules.imageconversion
       name: com.unity.modules.imageconversion
       displayName: Image Conversion
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The ImageConversion module implements the ImageConversion class
         which provides helper methods to convert images from and to PNG, JPEG or
@@ -1306,9 +1246,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1318,27 +1258,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.imgui@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.imgui@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.imgui@1.0.0
       assetPath: Packages/com.unity.modules.imgui
       name: com.unity.modules.imgui
       displayName: IMGUI
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The IMGUI module provides Unity''s immediate mode GUI solution
         for creating in-game and editor user interfaces. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.IMGUIModule.html'
@@ -1354,9 +1294,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1366,27 +1306,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.jsonserialize@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
       assetPath: Packages/com.unity.modules.jsonserialize
       name: com.unity.modules.jsonserialize
       displayName: JSONSerialize
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The JSONSerialize module provides the JsonUtility class which
         lets you serialize Unity Objects to JSON format. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.JSONSerializeModule.html'
@@ -1402,9 +1342,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1414,27 +1354,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.particlesystem@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
       assetPath: Packages/com.unity.modules.particlesystem
       name: com.unity.modules.particlesystem
       displayName: Particle System
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The ParticleSystem module implements Unity''s Particle System.
         Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.ParticleSystemModule.html'
@@ -1450,9 +1390,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1462,27 +1402,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.physics@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.physics@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.physics@1.0.0
       assetPath: Packages/com.unity.modules.physics
       name: com.unity.modules.physics
       displayName: Physics
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Physics module implements 3D physics in Unity. Scripting
         API: https://docs.unity3d.com/ScriptReference/UnityEngine.PhysicsModule.html'
@@ -1498,9 +1438,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1510,27 +1450,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.physics2d@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.physics2d@1.0.0
       assetPath: Packages/com.unity.modules.physics2d
       name: com.unity.modules.physics2d
       displayName: Physics 2D
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Physics2d module implements 2D physics in Unity. Scripting
         API: https://docs.unity3d.com/ScriptReference/UnityEngine.Physics2DModule.html'
@@ -1546,9 +1486,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1558,27 +1498,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.screencapture@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.screencapture@1.0.0
       assetPath: Packages/com.unity.modules.screencapture
       name: com.unity.modules.screencapture
       displayName: Screen Capture
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The ScreenCapture module provides functionality to take screen
         shots using the ScreenCapture class. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.ScreenCaptureModule.html'
@@ -1598,9 +1538,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1610,27 +1550,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.terrain@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.terrain@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.terrain@1.0.0
       assetPath: Packages/com.unity.modules.terrain
       name: com.unity.modules.terrain
       displayName: Terrain
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Terrain module implements Unity''s Terrain rendering engine
         available through the Terrain component. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.TerrainModule.html'
@@ -1646,9 +1586,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1658,27 +1598,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.terrainphysics@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
       assetPath: Packages/com.unity.modules.terrainphysics
       name: com.unity.modules.terrainphysics
       displayName: Terrain Physics
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The TerrainPhysics module connects the Terrain and Physics modules
         by implementing the TerrainCollider component. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.TerrainPhysicsModule.html'
@@ -1702,9 +1642,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1714,27 +1654,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.tilemap@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.tilemap@1.0.0
       assetPath: Packages/com.unity.modules.tilemap
       name: com.unity.modules.tilemap
       displayName: Tilemap
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Tilemap module implements the Tilemap class. Scripting API:
         https://docs.unity3d.com/ScriptReference/UnityEngine.TilemapModule.html'
@@ -1754,9 +1694,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1766,27 +1706,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.ui@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.ui@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.ui@1.0.0
       assetPath: Packages/com.unity.modules.ui
       name: com.unity.modules.ui
       displayName: UI
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UI module implements basic components required for Unity''s
         UI system Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UIModule.html'
@@ -1802,9 +1742,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1814,27 +1754,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.uielements@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.uielements@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.uielements@1.0.0
       assetPath: Packages/com.unity.modules.uielements
       name: com.unity.modules.uielements
       displayName: UIElements
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UIElements module implements the UIElements retained mode
         UI framework. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UIElementsModule.html'
@@ -1866,9 +1806,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1878,27 +1818,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.umbra@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.umbra@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.umbra@1.0.0
       assetPath: Packages/com.unity.modules.umbra
       name: com.unity.modules.umbra
       displayName: Umbra
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Umbra module implements Unity''s occlusion culling system.
         Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UmbraModule.html'
@@ -1914,9 +1854,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1926,27 +1866,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.unityanalytics@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
       assetPath: Packages/com.unity.modules.unityanalytics
       name: com.unity.modules.unityanalytics
       displayName: Unity Analytics
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UnityAnalytics module implements APIs required to use Unity
         Analytics. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UnityAnalyticsModule.html'
@@ -1970,9 +1910,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -1982,27 +1922,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.unitywebrequest@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequest
       name: com.unity.modules.unitywebrequest
       displayName: Unity Web Request
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UnityWebRequest module lets you communicate with http services.
         Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UnityWebRequestModule.html'
@@ -2018,9 +1958,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2030,27 +1970,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.unitywebrequestassetbundle@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
       name: com.unity.modules.unitywebrequestassetbundle
       displayName: Unity Web Request Asset Bundle
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UnityWebRequestAssetBundle module provides the DownloadHandlerAssetBundle
         class to use UnityWebRequest to download Asset Bundles. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UnityWebRequestAssetBundleModule.html'
@@ -2074,9 +2014,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2086,27 +2026,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.unitywebrequestaudio@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestaudio
       name: com.unity.modules.unitywebrequestaudio
       displayName: Unity Web Request Audio
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UnityWebRequestAudio module provides the DownloadHandlerAudioClip
         class to use UnityWebRequest to download AudioClips. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UnityWebRequestAudioModule.html'
@@ -2130,9 +2070,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2142,27 +2082,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.unitywebrequesttexture@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequesttexture
       name: com.unity.modules.unitywebrequesttexture
       displayName: Unity Web Request Texture
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UnityWebRequestTexture module provides the DownloadHandlerTexture
         class to use UnityWebRequest to download Textures. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UnityWebRequestTextureModule.html'
@@ -2186,9 +2126,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2198,27 +2138,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.unitywebrequestwww@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestwww
       name: com.unity.modules.unitywebrequestwww
       displayName: Unity Web Request WWW
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The UnityWebRequestWWW module implements the legacy WWW lets
         you communicate with http services. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.UnityWebRequestWWWModule.html'
@@ -2258,9 +2198,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2270,27 +2210,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.vehicles@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.vehicles@1.0.0
       assetPath: Packages/com.unity.modules.vehicles
       name: com.unity.modules.vehicles
       displayName: Vehicles
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Vehicles module implements vehicle physics simulation through
         the WheelCollider component. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.VehiclesModule.html'
@@ -2310,9 +2250,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2322,27 +2262,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.video@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.video@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.video@1.0.0
       assetPath: Packages/com.unity.modules.video
       name: com.unity.modules.video
       displayName: Video
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Video module lets you play back video files in your content.
         Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.VideoModule.html'
@@ -2370,9 +2310,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2382,27 +2322,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.vr@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.vr@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.vr@1.0.0
       assetPath: Packages/com.unity.modules.vr
       name: com.unity.modules.vr
       displayName: VR
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The VR module implements support for virtual reality devices
         in Unity. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.VRModule.html'
@@ -2432,9 +2372,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2444,27 +2384,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.wind@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.wind@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.wind@1.0.0
       assetPath: Packages/com.unity.modules.wind
       name: com.unity.modules.wind
       displayName: Wind
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Wind module implements the WindZone component which can affect
         terrain rendering and particle simulations. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.WindModule.html'
@@ -2480,9 +2420,9 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2492,27 +2432,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.xr@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.xr@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.xr@1.0.0
       assetPath: Packages/com.unity.modules.xr
       name: com.unity.modules.xr
       displayName: XR
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The XR module contains the VR and AR related platform support
         functionality. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.XRModule.html'
@@ -2540,9 +2480,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2552,27 +2492,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.subsystems@1.0.0
       testable: 0
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.subsystems@1.0.0
       assetPath: Packages/com.unity.modules.subsystems
       name: com.unity.modules.subsystems
       displayName: Subsystems
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
       description: 'The Subsystem module contains the definitions and runtime support
         for general subsystems in Unity. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.SubsystemsModule.html'
@@ -2592,9 +2532,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2604,29 +2544,29 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.modules.uielementsnative@1.0.0
       testable: 0
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
       assetPath: Packages/com.unity.modules.uielementsnative
       name: com.unity.modules.uielementsnative
       displayName: UIElements Native
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: module
-      description:
+      description: 
       status: 4
       errors: []
       versions:
@@ -2651,9 +2591,9 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id:
-        name:
-        url:
+        id: 
+        name: 
+        url: 
         scopes: []
         isDefault: 0
         capabilities: 0
@@ -2663,28 +2603,28 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 0
       repository:
-        type:
-        url:
-        revision:
-        path:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.ext.nunit@1.0.6
       testable: 0
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
       author:
-        name:
-        email:
-        url:
+        name: 
+        email: 
+        url: 
       category: Libraries
-      type:
+      type: 
       description: Custom version of the nunit package build to work with Unity.
         Used by the Unity Test Framework.
       status: 4
@@ -2713,7 +2653,7 @@ m_PackageAssets:
       - test
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -2724,27 +2664,27 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 637429759280000000
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
-        path:
+        path: 
     - packageId: com.unity.nuget.newtonsoft-json@2.0.0
       testable: 0
       isDirectDependency: 0
       version: 2.0.0
       source: 1
-      resolvedPath: C:\Users\Xiaomi\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
+      resolvedPath: C:\Users\nazar\OneDrive\Documents\GitHub\S.U.C.A_3.0\Unity_Folder\S.U.C.A_1\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
       assetPath: Packages/com.unity.nuget.newtonsoft-json
       name: com.unity.nuget.newtonsoft-json
       displayName: Newtonsoft Json
       author:
-        name:
-        email:
-        url:
-      category:
+        name: 
+        email: 
+        url: 
+      category: 
       type: library
       description: 'Newtonsoft Json for use in Unity projects and Unity packages.
         Currently synced to version 12.0.2.
@@ -2769,7 +2709,7 @@ m_PackageAssets:
       keywords: []
       registry:
         id: main
-        name:
+        name: 
         url: https://packages.unity.com
         scopes: []
         isDefault: 1
@@ -2780,14 +2720,14 @@ m_PackageAssets:
         isAllowed: 1
       isAssetStorePackage: 0
       datePublishedTicks: 0
-      documentationUrl:
+      documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
         revision: d2fd6ed876261bbd82f59199ad711e7667bf633a
-        path:
+        path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Xiaomi/GitHub/S.U.C.A_3.0/Unity_Folder/S.U.C.A_1/Packages
+m_ProjectPath: C:/Users/nazar/OneDrive/Documents/GitHub/S.U.C.A_3.0/Unity_Folder/S.U.C.A_1/Packages
 m_EditorVersion: 2020.3.11f1 (99c7afb366b3)
