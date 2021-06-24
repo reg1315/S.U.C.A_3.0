@@ -33,6 +33,17 @@ public class GameControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (muveaccess)
+        {
+            ADMove();
+        }
+
+
+    }
+
+    public bool muveaccess = true;
+    private void ADMove()
+    {
         if (Input.GetKeyDown(KeyCode.A))
         {
             if ((rotator.transform.eulerAngles.y >= 345 & rotator.transform.eulerAngles.y <= 360) || (rotator.transform.eulerAngles.y >= 0 & rotator.transform.eulerAngles.y < 75))
@@ -126,7 +137,5 @@ public class GameControler : MonoBehaviour
         {
             Wols[3].transform.position = Vector3.Lerp(Wols[3].transform.position, endPositionV3[3], speed * Time.deltaTime);
         }
-
-
     }
 }

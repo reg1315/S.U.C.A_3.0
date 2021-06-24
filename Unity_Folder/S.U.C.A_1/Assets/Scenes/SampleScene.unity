@@ -180,6 +180,7 @@ MonoBehaviour:
   speed: 14
   down: -2
   rotator: {fileID: 1411181754}
+  muveaccess: 1
 --- !u!1 &820107068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3661101974368479945, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
@@ -346,42 +347,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!1 &1096204134 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2438094819190760505, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
-  m_PrefabInstance: {fileID: 1759419583}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1096204138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096204134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb0add8f7ed0cc4596eb8760896cd1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: -1
-  y: -1
-  z: 1
-  YRotation: 0
-  MainCamera: {fileID: 963194227}
-  speed: 5
---- !u!65 &1096204139
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096204134}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0870015, y: 0.07672058, z: 0.05744619}
-  m_Center: {x: -0.006974265, y: -0.0027707524, z: -0.0006777115}
 --- !u!1 &1151805276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7666137577573364999, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
@@ -404,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a352ce81ffebfe499bec099c8c781cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamecontroler: {fileID: 326118326}
   x: 0.55
   y: 0.2
   z: 0.15
@@ -421,8 +387,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3602414, y: 0.3268069, z: 0.3152588}
-  m_Center: {x: -0.080976635, y: 0.00319231, z: 0.000000044703487}
+  m_Size: {x: 0.31223792, y: 0.3177093, z: 0.3130731}
+  m_Center: {x: -0.089446574, y: -0.0013565123, z: -0.0010928065}
 --- !u!1 &1341073090 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 236787926078480753, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
@@ -780,8 +746,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42943138, y: 0.36344293, z: 0.47273618}
-  m_Center: {x: -0.062324136, y: 0.011029332, z: -0.0416014}
+  m_Size: {x: 0.39200544, y: 0.25461882, z: 0.40322953}
+  m_Center: {x: -0.078394115, y: 0.0654414, z: -0.0175765}
 --- !u!114 &1928389453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,6 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a352ce81ffebfe499bec099c8c781cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamecontroler: {fileID: 0}
   x: -0.9
   y: 0.2
   z: 0.3
