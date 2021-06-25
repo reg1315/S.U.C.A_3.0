@@ -35,7 +35,7 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
 
     private bool Bmovetheobject = false;
     private bool Bmovetotheback = false;
-
+    private bool Bescape = false;
 
 
     void Start()
@@ -46,41 +46,8 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     // Update is called once per frame
     void Update()
     {
-        //OnClicAnimation();
-        if (Bmovetheobject)
-        {
-            if (MainCamera.transform.position == CameraEndPos)
-            {
-                Bmovetheobject = false;
-            }
-            else if (MainCamera.transform.position != CameraEndPos)
-            {
-                Bmovetotheback = false;
-                Move(CameraEndPos, CameraEndRotation);
-            }
-        }
-
-        if (Bmovetotheback)
-        {
-            if (MainCamera.transform.position == CameraFirstPos)
-            {
-                Bmovetotheback = false;
-                gamecontroler.muveaccess = true;
-            }
-            else if(MainCamera.transform.position != CameraFirstPos)
-            {
-                Bmovetheobject = false;
-                Move(CameraFirstPos, CameraFirstRotation);
-            }
-            
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Bmovetheobject = false;
-            Bmovetotheback = true;
-            oneclic = false;
-        }
+        OnClicAnimation();
+       
     }
 
     private void OnClicAnimation()
@@ -92,12 +59,12 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
                 Bmovetotheback = false;
                 Move(CameraEndPos, CameraEndRotation);
             }
-            else if (MainCamera.transform.position == CameraEndPos)
+            else
             {
                 Bmovetheobject = false;
             }
         }
-
+        
         if (Bmovetotheback)
         {
             if (MainCamera.transform.position != CameraFirstPos)
@@ -105,7 +72,7 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
                 Bmovetheobject = false;
                 Move(CameraFirstPos, CameraFirstRotation);
             }
-            else if (MainCamera.transform.position == CameraFirstPos)
+            else
             {
                 Bmovetotheback = false;
                 gamecontroler.muveaccess = true;
@@ -119,10 +86,16 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
             oneclic = false;
         }
     }
+
     private void Move(Vector3 pos, Quaternion rotation)
     {
+        MainCamera.transform.position = Vector3.Lerp(MainCamera.transform.position, pos, Time.deltaTime * speed);
         MainCamera.transform.rotation = Quaternion.Slerp(MainCamera.transform.rotation, rotation, Time.deltaTime * speed);
-        MainCamera.transform.position = Vector3.Lerp(MainCamera.transform.position, pos,Time.deltaTime * speed);
+        if(MainCamera.transform.position.x>= pos.x - 0.005 & MainCamera.transform.position.x <= pos.x + 0.005)
+        {
+            MainCamera.transform.position = pos;
+            MainCamera.transform.rotation = rotation;
+        }
         //StartCoroutine(waiter(pos, rotation));
     }
 

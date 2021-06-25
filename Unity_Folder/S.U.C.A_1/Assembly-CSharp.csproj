@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\level_1\scripts\MoveTheObject.cs" />
-    <Compile Include="Assets\level_1\scripts\ClickReceiver.cs" />
     <Compile Include="Assets\level_1\scripts\GameControler.cs" />
   </ItemGroup>
   <ItemGroup>
