@@ -54,29 +54,31 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     {
         if (Bmovetheobject)
         {
-            if (MainCamera.transform.position != CameraEndPos)
+            if (MainCamera.transform.position == CameraEndPos)
+            {
+                Bmovetheobject = false;
+            }
+            else
             {
                 Bmovetotheback = false;
                 Move(CameraEndPos, CameraEndRotation);
             }
-            else
-            {
-                Bmovetheobject = false;
-            }
+            
         }
         
         if (Bmovetotheback)
         {
-            if (MainCamera.transform.position != CameraFirstPos)
-            {
-                Bmovetheobject = false;
-                Move(CameraFirstPos, CameraFirstRotation);
-            }
-            else
+            if (MainCamera.transform.position == CameraFirstPos)
             {
                 Bmovetotheback = false;
                 gamecontroler.muveaccess = true;
             }
+            else
+            {
+                Bmovetheobject = false;
+                Move(CameraFirstPos, CameraFirstRotation);
+            }
+            
         }
         
         if (Input.GetKeyUp(KeyCode.Escape))
@@ -89,7 +91,7 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
 
     private void Move(Vector3 pos, Quaternion rotation)
     {
-        MainCamera.transform.position = Vector3.Lerp(MainCamera.transform.position, pos, Time.deltaTime * speed);
+        MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, pos, Time.deltaTime * speed);
         MainCamera.transform.rotation = Quaternion.Slerp(MainCamera.transform.rotation, rotation, Time.deltaTime * speed);
         if(MainCamera.transform.position.x>= pos.x - 0.005 & MainCamera.transform.position.x <= pos.x + 0.005)
         {
