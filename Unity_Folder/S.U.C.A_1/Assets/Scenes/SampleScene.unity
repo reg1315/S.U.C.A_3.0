@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamecontroler: {fileID: 326118326}
-  x: 0.55
+  x: 0.6
   y: 0.2
   z: 0.15
   YRotation: 270
@@ -760,10 +760,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a352ce81ffebfe499bec099c8c781cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamecontroler: {fileID: 0}
-  x: -0.9
+  gamecontroler: {fileID: 326118326}
+  x: -0.95
   y: 0.2
-  z: 0.3
+  z: 0.35
   YRotation: 85
   MainCamera: {fileID: 963194227}
   speed: 5

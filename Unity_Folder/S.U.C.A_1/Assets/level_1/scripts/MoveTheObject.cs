@@ -94,7 +94,7 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     private void Move(Vector3 pos, Quaternion rotation)
     {
         MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, pos, Time.deltaTime * speed);
-        MainCamera.transform.rotation = Quaternion.Slerp(MainCamera.transform.rotation, rotation, Time.deltaTime * speed/2);
+        MainCamera.transform.rotation = Quaternion.Slerp(MainCamera.transform.rotation, rotation, Time.deltaTime * speed);
         //if(MainCamera.transform.position.x>= pos.x - 0.005 & MainCamera.transform.position.x <= pos.x + 0.005)
         //{
         //    MainCamera.transform.position = pos;
