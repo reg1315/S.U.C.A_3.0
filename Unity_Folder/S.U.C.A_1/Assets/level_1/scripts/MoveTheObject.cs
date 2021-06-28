@@ -12,10 +12,13 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
         if (!oneclic)
         {
             CameraFirstPos = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y, MainCamera.transform.position.z);
-            CameraEndPos = new Vector3(transform.position.x + x, transform.position.z + y, -transform.position.y + z);
-            CameraFirstRotation = Quaternion.Euler(MainCamera.transform.rotation.eulerAngles.x, MainCamera.transform.rotation.eulerAngles.y, MainCamera.transform.rotation.eulerAngles.z);
-            CameraEndRotation = Quaternion.Euler(0, YRotation, 0);
-            
+
+            ShowMeCamera.Default();
+            ShowMeCamera.target = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            ShowMeCamera.Blook = true;
+            cameraRotateAround.target = gameObject.transform;
+
+
             gamecontroler.muveaccess = false;
             Bmovetoheobject = true;
             oneclic = true;
@@ -26,11 +29,11 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     public float YRotation;
 
     public Camera MainCamera;
+    public ShowMe ShowMeCamera;
+    public CameraRotateAround cameraRotateAround;
 
     private Vector3 CameraFirstPos;
-    private Quaternion CameraFirstRotation;
     private Vector3 CameraEndPos;
-    private Quaternion CameraEndRotation;
 
     public float speed;
 
@@ -38,19 +41,19 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     private bool Bmovetotheback = false;
     private bool Bescape = false;
 
-
     void Start()
-    {
-
+    {   
+        CameraEndPos = new Vector3(transform.position.x + x, transform.position.y, transform.position.z);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Bescape) { Escape(); }
-        if (Bmovetotheback) { BacAnimation(); }
+        if (Bescape) Escape();
+        if (Bmovetotheback) BacAnimation();
 
-        if (Bmovetoheobject) { OnClicAnimation(); }
+        if (Bmovetoheobject) OnClicAnimation();
 
     }
 
@@ -58,12 +61,16 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     {
         if (MainCamera.transform.position != CameraEndPos)
         {
-            Move(CameraEndPos, CameraEndRotation);
+            Move(CameraEndPos);
         }
         else
         {
+            ShowMeCamera.Blook = false;
+
             Bescape = true;
             Bmovetoheobject = false;
+
+            cameraRotateAround.bRotate = true;
         }
     }
 
@@ -71,12 +78,15 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     {
         if (MainCamera.transform.position != CameraFirstPos)
         {
-            Move(CameraFirstPos, CameraFirstRotation);
+            Move(CameraFirstPos);
         }
         else
         {
             Bmovetotheback = false;
             gamecontroler.muveaccess = true;
+
+            ShowMeCamera.Default();
+            ShowMeCamera.speed = speed;
         }
     }
 
@@ -84,29 +94,20 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            cameraRotateAround.bRotate = false;
+
             Bmovetoheobject = false;
             Bmovetotheback = true;
             Bescape = false;
+
+            ShowMeCamera.Blook = true;
+
             oneclic = false;
         }
     }
 
-    private void Move(Vector3 pos, Quaternion rotation)
+    private void Move(Vector3 pos)
     {
         MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, pos, Time.deltaTime * speed);
-        MainCamera.transform.rotation = Quaternion.Slerp(MainCamera.transform.rotation, rotation, Time.deltaTime * speed);
-        //if(MainCamera.transform.position.x>= pos.x - 0.005 & MainCamera.transform.position.x <= pos.x + 0.005)
-        //{
-        //    MainCamera.transform.position = pos;
-        //    MainCamera.transform.rotation = rotation;
-        //}
-        //StartCoroutine(waiter(pos, rotation));
     }
-
-    //IEnumerator waiter(Vector3 pos, Quaternion rotation)
-    //{
-    //    yield return new WaitForSeconds(Time.deltaTime * speed * 20);
-    //    MainCamera.transform.rotation = rotation;
-    //    MainCamera.transform.position = pos;
-    //}
 }

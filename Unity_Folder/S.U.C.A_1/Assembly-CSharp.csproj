@@ -58,6 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\level_1\scripts\MoveTheObject.cs" />
     <Compile Include="Assets\level_1\scripts\GameControler.cs" />
+    <Compile Include="Assets\level_1\scripts\ShowMe.cs" />
+    <Compile Include="Assets\level_1\scripts\CameraRotateAround.cs" />
+    <Compile Include="Assets\level_1\scripts\ObjectRotate.cs" />
+    <Compile Include="Assets\level_3\scripts\Orol.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
