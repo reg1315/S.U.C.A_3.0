@@ -27,7 +27,19 @@ public class CameraRotateAround : MonoBehaviour
 	{
 		if (bRotate) Rotate();
 	}
-
+	// проверяем, если есть на пути луча, от игрока до камеры, какое-либо препятствие (коллайдер)
+	Vector3 PositionCorrection(Vector3 target, Vector3 position)
+	{
+		RaycastHit hit;
+		Debug.DrawLine(target, position, Color.blue);
+		if (Physics.Linecast(target, position, out hit))
+		{
+			float tempDistance = Vector3.Distance(target, hit.point);
+			Vector3 pos = target - (transform.rotation * Vector3.forward * tempDistance);
+			position = new Vector3(pos.x, position.y, pos.z); // сдвиг позиции в точку контакта
+		}
+		return position;
+	}
 	private void Rotate()
     {
 		if (Input.GetAxis("Mouse ScrollWheel") > 0) offset.z += zoom;
@@ -39,5 +51,8 @@ public class CameraRotateAround : MonoBehaviour
 		Y = Mathf.Clamp(Y, -limit, limit);
 		transform.localEulerAngles = new Vector3(-Y, X, 0);
 		transform.position = transform.localRotation * offset + target.position;
+
+		// определяем точку на указанной дистанции от игрока
+		transform.position = PositionCorrection(target.position, transform.position); // находим текущую позицию, относительно игрока
 	}
 }
