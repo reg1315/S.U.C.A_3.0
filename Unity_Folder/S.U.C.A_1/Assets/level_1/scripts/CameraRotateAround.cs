@@ -11,7 +11,9 @@ public class CameraRotateAround : MonoBehaviour
 	public float zoom = 0.25f; // чувствительность при увеличении, колесиком мышки
 	public float zoomMax = 10; // макс. увеличение
 	public float zoomMin = 3; // мин. увеличение
-	private float X, Y;
+	public float X, Y;
+	public float ClampX, ClampY, ClampZ;
+	public Quaternion ClampRotation;
 
 	public bool bRotate = false;
 
@@ -19,27 +21,20 @@ public class CameraRotateAround : MonoBehaviour
 	{
 		limit = Mathf.Abs(limit);
 		if (limit > 90) limit = 90;
-		offset = new Vector3(offset.x, offset.y, -Mathf.Abs(zoomMax) / 2);
+		offset = new Vector3(offset.x, offset.y, -Mathf.Abs(zoomMax));
 		transform.position = target.position + offset;
 	}
+
+	//void Moved()
+ //   {
+	//	if(Input.)
+ //   }
 
 	void Update()
 	{
 		if (bRotate) Rotate();
 	}
-	// проверяем, если есть на пути луча, от игрока до камеры, какое-либо препятствие (коллайдер)
-	Vector3 PositionCorrection(Vector3 target, Vector3 position)
-	{
-		RaycastHit hit;
-		Debug.DrawLine(target, position, Color.blue);
-		if (Physics.Linecast(target, position, out hit))
-		{
-			float tempDistance = Vector3.Distance(target, hit.point);
-			Vector3 pos = target - (transform.rotation * Vector3.forward * tempDistance);
-			position = new Vector3(pos.x, position.y, pos.z); // сдвиг позиции в точку контакта
-		}
-		return position;
-	}
+	
 	private void Rotate()
     {
 		if (Input.GetAxis("Mouse ScrollWheel") > 0) offset.z += zoom;
@@ -50,9 +45,34 @@ public class CameraRotateAround : MonoBehaviour
 		Y += Input.GetAxis("Mouse Y") * sensitivity;
 		Y = Mathf.Clamp(Y, -limit, limit);
 		transform.localEulerAngles = new Vector3(-Y, X, 0);
-		transform.position = transform.localRotation * offset + target.position;
+		transform.position = transform.parent.rotation * transform.localRotation * offset + target.position;
 
-		// определяем точку на указанной дистанции от игрока
-		transform.position = PositionCorrection(target.position, transform.position); // находим текущую позицию, относительно игрока
+		RaycastHit hit;
+		Debug.DrawLine(target.position, transform.position, Color.blue);
+		if (Physics.Linecast(target.position, transform.position, out hit))
+		{
+			float tempDistance = Vector3.Distance(target.position, hit.point);
+            if (tempDistance == zoomMin)
+            {
+
+			}
+            else if (tempDistance < zoomMin - 0.05f)
+            {
+				transform.position = new Vector3(Mathf.Clamp(transform.position.x, ClampX, ClampX), Mathf.Clamp(transform.position.y, ClampY, ClampY), Mathf.Clamp(transform.position.z, ClampZ, ClampZ));
+				transform.rotation = ClampRotation;
+				Debug.DrawLine(target.position, transform.position, Color.red);
+			}
+            else
+            {
+				Vector3 pos = target.position - (transform.rotation * Vector3.forward * tempDistance);
+				transform.position = new Vector3(pos.x, pos.y + 0.02f, pos.z); // сдвиг позиции в точку контакта
+
+				ClampX = transform.position.x;
+				ClampY = transform.position.y;
+				ClampZ = transform.position.z;
+
+				ClampRotation = transform.rotation;
+			}
+        }
 	}
 }

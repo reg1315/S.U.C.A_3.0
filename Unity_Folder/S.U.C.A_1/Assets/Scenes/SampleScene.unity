@@ -438,10 +438,16 @@ MonoBehaviour:
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
   sensitivity: 4
-  limit: 90
+  limit: 45
   zoom: 0.05
   zoomMax: 0.8
-  zoomMin: 0.6
+  zoomMin: 0.5
+  X: 0
+  Y: 0
+  ClampX: 0
+  ClampY: 0
+  ClampZ: 0
+  ClampRotation: {x: 0, y: 0, z: 0, w: 0}
   bRotate: 0
 --- !u!1 &1151805276 stripped
 GameObject:
