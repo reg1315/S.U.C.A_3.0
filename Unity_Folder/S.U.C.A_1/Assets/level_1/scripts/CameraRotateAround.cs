@@ -12,10 +12,18 @@ public class CameraRotateAround : MonoBehaviour
 	public float zoomMax = 10; // макс. увеличение
 	public float zoomMin = 3; // мин. увеличение
 	public float X, Y;
+	public float touchX, touchY;
 	public float ClampX, ClampY, ClampZ;
 	public Quaternion ClampRotation;
 
 	public bool bRotate = false;
+
+	private Vector2 startPos;
+	private Vector3 startCameraPos;
+
+	private float distance;
+
+	public int toutch = 0;
 
 	void Start()
 	{
@@ -37,17 +45,37 @@ public class CameraRotateAround : MonoBehaviour
 	
 	private void Rotate()
     {
-		if (Input.GetAxis("Mouse ScrollWheel") > 0) offset.z += zoom;
-		else if (Input.GetAxis("Mouse ScrollWheel") < 0) offset.z -= zoom;
-		offset.z = Mathf.Clamp(offset.z, -Mathf.Abs(zoomMax), -Mathf.Abs(zoomMin));
+		//Zoom to PC
+		//if (Input.GetAxis("Mouse ScrollWheel") > 0) offset.z += zoom;
+		//else if (Input.GetAxis("Mouse ScrollWheel") < 0) offset.z -= zoom;
+		//offset.z = Mathf.Clamp(offset.z, -Mathf.Abs(zoomMax), -Mathf.Abs(zoomMin));
 
-		X = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivity;
-		Y += Input.GetAxis("Mouse Y") * sensitivity;
-		Y = Mathf.Clamp(Y, -limit, limit);
-		transform.localEulerAngles = new Vector3(-Y, X, 0);
-		transform.position = transform.parent.rotation * transform.localRotation * offset + target.position;
+		//Zoom to SmartPhone device
+		if (Input.touchCount == 2) Zoom();
+		
+		//Rotation to SmartPhone device
+		if (Input.touchCount > 0)
+		{
+			var touch = Input.GetTouch(0); 
+			switch (touch.phase)
+			{
+				case TouchPhase.Began:
+					startPos = touch.position;
+					startCameraPos = transform.localEulerAngles;
+					break;
 
-		RaycastHit hit;
+				case TouchPhase.Moved:
+					var dir = touch.position - startPos;
+					X = startCameraPos.y + dir.x * sensitivity;
+					Y = startCameraPos.x - dir.y * sensitivity;
+					break;
+			}
+		}
+		transform.localEulerAngles = new Vector3(Y, X, 0);
+        transform.position = transform.parent.rotation * transform.localRotation * offset + target.position;
+
+		//Вирівнювання (Не знаю як буде на англ якщо хтось знає напишіть в лапках)
+        RaycastHit hit;
 		Debug.DrawLine(target.position, transform.position, Color.blue);
 		if (Physics.Linecast(target.position, transform.position, out hit))
 		{
@@ -73,6 +101,25 @@ public class CameraRotateAround : MonoBehaviour
 
 				ClampRotation = transform.rotation;
 			}
+        }
+	}
+	private void Zoom()
+	{
+		Vector2 finger1 = Input.GetTouch(0).position;
+		Vector2 finger2 = Input.GetTouch(1).position;
+
+		float delta = Vector2.Distance(finger1, finger2);
+		var touch = Input.GetTouch(1);
+        switch (touch.phase)
+        {
+			case TouchPhase.Began:
+				distance = delta;
+				break;
+			case TouchPhase.Moved:
+				if (delta > distance) offset.z += zoom;
+				else if(delta < distance) offset.z -= zoom;
+				offset.z = Mathf.Clamp(offset.z, -Mathf.Abs(zoomMax), -Mathf.Abs(zoomMin));
+				break;
         }
 	}
 }

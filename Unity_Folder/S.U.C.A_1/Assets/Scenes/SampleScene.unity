@@ -437,18 +437,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
-  sensitivity: 4
+  sensitivity: 0.2
   limit: 45
-  zoom: 0.05
+  zoom: 0.005
   zoomMax: 0.8
-  zoomMin: 0.5
+  zoomMin: 0.6
   X: 0
   Y: 0
+  touchX: 0
+  touchY: 0
   ClampX: 0
   ClampY: 0
   ClampZ: 0
   ClampRotation: {x: 0, y: 0, z: 0, w: 0}
   bRotate: 0
+  toutch: 0
 --- !u!1 &1151805276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7666137577573364999, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
