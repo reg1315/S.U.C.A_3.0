@@ -12,6 +12,11 @@ public class GameControler : MonoBehaviour
     private Vector3[] endPositionV3 = new Vector3[4];
     private Vector3 downPosition;
     private Vector3 normalPosition;
+
+    private Vector2 startPos;
+    private Vector3 startCameraPos;
+    public float sensivity = 0.1f;
+
     public float speed;
 
     public float down;
@@ -44,7 +49,7 @@ public class GameControler : MonoBehaviour
     public bool muveaccess = true;
     private void ADMove()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (LeftSwipe())
         {
             if ((rotator.transform.eulerAngles.y >= 345 & rotator.transform.eulerAngles.y <= 360) || (rotator.transform.eulerAngles.y >= 0 & rotator.transform.eulerAngles.y < 75))
             {
@@ -80,7 +85,7 @@ public class GameControler : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (RightSwipe())
         {
             if (rotator.transform.eulerAngles.y <= 105 & rotator.transform.eulerAngles.y > 15)
             {
@@ -137,5 +142,51 @@ public class GameControler : MonoBehaviour
         {
             Wols[3].transform.position = Vector3.Lerp(Wols[3].transform.position, endPositionV3[3], speed * Time.deltaTime);
         }
+    }
+
+    bool LeftSwipe()
+    {
+        if(Input.touchCount > 0)
+        {
+            var touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    startPos = touch.position;
+                    startCameraPos = rotator.transform.localEulerAngles;
+                    break;
+                case TouchPhase.Moved:
+                    float X = startCameraPos.y + (touch.position.x - startPos.x)* sensivity;
+                    rotator.transform.localEulerAngles = new Vector3(rotator.transform.localEulerAngles.x, X, rotator.transform.localEulerAngles.z);
+                    break;
+                case TouchPhase.Ended:
+                    if (touch.position.x - startPos.x > 0) return true;
+                    break;
+            }
+        }
+        return false;
+    }
+
+    bool RightSwipe()
+    {
+        if(Input.touchCount > 0)
+        {
+            var touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    startPos = touch.position;
+                    startCameraPos = rotator.transform.localEulerAngles;
+                    break;
+                case TouchPhase.Moved:
+                    float X = startCameraPos.y + (touch.position.x - startPos.x) * sensivity;
+                    rotator.transform.localEulerAngles = new Vector3(rotator.transform.localEulerAngles.x, X, rotator.transform.localEulerAngles.z);
+                    break;
+                case TouchPhase.Ended:
+                    if (touch.position.x - startPos.x < 0) return true;
+                    break;
+            }
+        }
+        return false;
     }
 }

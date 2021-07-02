@@ -30,12 +30,13 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
 
     public Camera MainCamera;
     public ShowMe ShowMeCamera;
+    public PhysicsRaycaster PhysicsRaycasterCamera;
     public CameraRotateAround cameraRotateAround;
 
     private Vector3 CameraFirstPos;
     private Vector3 CameraEndPos;
 
-    public float speed;
+    public float speed = 10;
 
     private bool Bmovetoheobject = false;
     private bool Bmovetotheback = false;
@@ -71,6 +72,8 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
             Bmovetoheobject = false;
 
             cameraRotateAround.bRotate = true;
+            //cameraRotateAround.X = MainCamera.transform.localEulerAngles.y;
+            //cameraRotateAround.Y = MainCamera.transform.localEulerAngles.x;
         }
     }
 
@@ -82,6 +85,7 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
         }
         else
         {
+            PhysicsRaycasterCamera.enabled = true;
             Bmovetotheback = false;
             gamecontroler.muveaccess = true;
 
@@ -92,8 +96,9 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
 
     private void Escape()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) || Bacswipe())
         {
+            PhysicsRaycasterCamera.enabled = false;
             cameraRotateAround.bRotate = false;
 
             Bmovetoheobject = false;
@@ -104,6 +109,30 @@ public class MoveTheObject : MonoBehaviour, IPointerClickHandler
 
             oneclic = false;
         }
+    }
+
+    private float distance;
+    private bool Bacswipe()
+    {
+        if (Input.touchCount == 3)
+        {
+            Vector2 finger1 = Input.GetTouch(0).position;
+            Vector2 finger3 = Input.GetTouch(2).position;
+
+            float delta = Vector2.Distance(finger1, finger3);
+            var touch = Input.GetTouch(1);
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    distance = delta;
+                    break;
+                case TouchPhase.Moved:
+                    if (delta < distance) return true; 
+                    break;
+            }
+        }
+
+        return false;
     }
 
     private void Move(Vector3 pos)

@@ -6,15 +6,14 @@ public class CameraRotateAround : MonoBehaviour
 
 	public Transform target;
 	public Vector3 offset;
-	public float sensitivity = 3; // чувствительность мышки
+	public float sensivity = 3; // чувствительность мышки
 	public float limit = 80; // ограничение вращения по Y
 	public float zoom = 0.25f; // чувствительность при увеличении, колесиком мышки
 	public float zoomMax = 10; // макс. увеличение
 	public float zoomMin = 3; // мин. увеличение
 	public float X, Y;
-	public float touchX, touchY;
-	public float ClampX, ClampY, ClampZ;
-	public Quaternion ClampRotation;
+	private float ClampX, ClampY, ClampZ;
+	private Quaternion ClampRotation;
 
 	public bool bRotate = false;
 
@@ -23,7 +22,8 @@ public class CameraRotateAround : MonoBehaviour
 
 	private float distance;
 
-	public int toutch = 0;
+	public float deltatime0;
+	public float deltatime1;
 
 	void Start()
 	{
@@ -52,11 +52,12 @@ public class CameraRotateAround : MonoBehaviour
 
 		//Zoom to SmartPhone device
 		if (Input.touchCount == 2) Zoom();
-		
+
 		//Rotation to SmartPhone device
 		if (Input.touchCount > 0)
 		{
-			var touch = Input.GetTouch(0); 
+			var touch = Input.GetTouch(0);
+			
 			switch (touch.phase)
 			{
 				case TouchPhase.Began:
@@ -66,16 +67,17 @@ public class CameraRotateAround : MonoBehaviour
 
 				case TouchPhase.Moved:
 					var dir = touch.position - startPos;
-					X = startCameraPos.y + dir.x * sensitivity;
-					Y = startCameraPos.x - dir.y * sensitivity;
+					X = startCameraPos.y + dir.x * sensivity;
+					Y = startCameraPos.x - dir.y * sensivity;
+					//Y = Mathf.Clamp(Y, -limit, limit);
+					transform.localEulerAngles = new Vector3(Y, X, 0);
+					transform.position = transform.parent.rotation * transform.localRotation * offset + target.position;
 					break;
 			}
 		}
-		transform.localEulerAngles = new Vector3(Y, X, 0);
-        transform.position = transform.parent.rotation * transform.localRotation * offset + target.position;
 
 		//Вирівнювання (Не знаю як буде на англ якщо хтось знає напишіть в лапках)
-        RaycastHit hit;
+		RaycastHit hit;
 		Debug.DrawLine(target.position, transform.position, Color.blue);
 		if (Physics.Linecast(target.position, transform.position, out hit))
 		{

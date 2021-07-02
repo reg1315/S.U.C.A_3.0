@@ -191,6 +191,7 @@ MonoBehaviour:
   - {fileID: 820107068}
   - {fileID: 1151805276}
   - {fileID: 1341073090}
+  sensivity: 0.1
   speed: 14
   down: -2
   rotator: {fileID: 1411181754}
@@ -437,21 +438,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
-  sensitivity: 0.2
+  sensivity: 0.2
   limit: 45
   zoom: 0.005
   zoomMax: 0.8
   zoomMin: 0.6
   X: 0
   Y: 0
-  touchX: 0
-  touchY: 0
-  ClampX: 0
-  ClampY: 0
-  ClampZ: 0
-  ClampRotation: {x: 0, y: 0, z: 0, w: 0}
   bRotate: 0
-  toutch: 0
+  deltatime0: 0
+  deltatime1: 0
 --- !u!1 &1151805276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7666137577573364999, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
@@ -495,6 +491,7 @@ MonoBehaviour:
   YRotation: 0
   MainCamera: {fileID: 963194227}
   ShowMeCamera: {fileID: 963194231}
+  PhysicsRaycasterCamera: {fileID: 963194230}
   cameraRotateAround: {fileID: 963194232}
   speed: 10
 --- !u!64 &1291611851
@@ -562,6 +559,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1462591078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5006903981017996550, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
+  m_PrefabInstance: {fileID: 1759419583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1462591082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462591078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a352ce81ffebfe499bec099c8c781cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamecontroler: {fileID: 326118326}
+  x: 0
+  y: 0
+  z: -2
+  YRotation: -90
+  MainCamera: {fileID: 963194227}
+  ShowMeCamera: {fileID: 963194231}
+  PhysicsRaycasterCamera: {fileID: 963194230}
+  cameraRotateAround: {fileID: 963194232}
+  speed: 10
+--- !u!64 &1462591083
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462591078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1043282498611016904, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
 --- !u!1001 &1759419583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -755,7 +793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238514183633966261, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4525342102890931048, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -783,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5111744006652328822, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5958438921693756439, guid: 3adb53b9e146e83458460031dff48bc0, type: 3}
       propertyPath: m_Intensity
@@ -905,6 +943,7 @@ MonoBehaviour:
   YRotation: 85
   MainCamera: {fileID: 963194227}
   ShowMeCamera: {fileID: 963194231}
+  PhysicsRaycasterCamera: {fileID: 963194230}
   cameraRotateAround: {fileID: 963194232}
   speed: 10
 --- !u!1 &2006057985
