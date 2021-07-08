@@ -7,53 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 3b2a487e54c0feb4f8e3920c9e05ae9c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: black_figure_mat
-    second: {fileID: 2100000, guid: 8045b465621b25540945645a7f48e98b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: checker_mat
-    second: {fileID: 2100000, guid: 172c4c16b64cae74aa897df96e94ad2c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: cheeck_clock
-    second: {fileID: 2100000, guid: 98163605c4d20ab47a43bfcf6bd74bee, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: floor_material
-    second: {fileID: 2100000, guid: 9b5476e37102be244b2a9514085de546, type: 2}
+      name: level_4_mat
+    second: {fileID: 2100000, guid: e5be57c6472cb5b48a5f542b04e1ffa3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: phone
     second: {fileID: 2100000, guid: a8bcae4434c5c8a40bb9a2501454d39b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: table_mat
-    second: {fileID: 2100000, guid: ff0e363a36adac2498f61cb496343984, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: telephone
-    second: {fileID: 2100000, guid: bcd0a927c0c18c74d96ef67d319e53af, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: telephone.001
-    second: {fileID: 2100000, guid: a445e9c508c01ec41b17fee0bac73768, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: white_figure_mat
-    second: {fileID: 2100000, guid: af901802761b2d441a56c24db7fabba1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

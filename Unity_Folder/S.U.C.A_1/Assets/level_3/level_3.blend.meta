@@ -70,6 +70,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: level_3_tex
+    second: {fileID: 2100000, guid: 165538d728c251e4fab4cc142c72cb80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lins_material
     second: {fileID: 2100000, guid: c957782fc6ea9a14cb08cb574109e5b8, type: 2}
   - first:
