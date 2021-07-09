@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 8a8aa6bf8ae2a9d40b54eed2f2bfd335
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -64,6 +67,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: keyboard_base
     second: {fileID: 2100000, guid: 36183bad66846b04d8aa06c1a89336d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: level_3_tex
+    second: {fileID: 2100000, guid: 165538d728c251e4fab4cc142c72cb80, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
