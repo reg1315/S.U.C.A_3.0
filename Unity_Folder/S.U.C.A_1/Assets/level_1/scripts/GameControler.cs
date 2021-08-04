@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System;
 
 public class GameControler : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class GameControler : MonoBehaviour
 
     public GameObject[] Wols = new GameObject[4];
     private Vector3[] endPositionV3 = new Vector3[4];
+    private Vector3[] endPositionV3normalizade = new Vector3[4];
     private Vector3 downPosition;
     private Vector3 normalPosition;
 
@@ -23,7 +24,21 @@ public class GameControler : MonoBehaviour
 
     public GameObject rotator;
 
-    // Start is called before the first frame update
+    public void Up()
+    {
+        for (int i = 0; i < 4; i++)
+            endPositionV3normalizade[i] = endPositionV3[i];
+
+        for (int i = 0; i < 4; i++)
+            endPositionV3[i] = normalPosition;
+    }
+
+    public void normalizade() 
+    {
+        for (int i = 0; i < 4; i++)
+            endPositionV3[i] = endPositionV3normalizade[i];
+    }
+
     void Start()
     {
         normalPosition = Vector3.zero;
@@ -35,96 +50,94 @@ public class GameControler : MonoBehaviour
         endPositionV3[3] = downPosition;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (muveaccess)
-        {
-            ADMove();
-        }
-
-
+        ADMove();
     }
 
     public bool muveaccess = true;
     private void ADMove()
     {
-        if (LeftSwipe())
+        if (muveaccess)
         {
-            if ((rotator.transform.eulerAngles.y >= 345 & rotator.transform.eulerAngles.y <= 360) || (rotator.transform.eulerAngles.y >= 0 & rotator.transform.eulerAngles.y < 75))
+            if (LeftSwipe())
             {
-                endPosition = Quaternion.Euler(0, 90, 0);
-                endPositionV3[0] = downPosition;
-                endPositionV3[1] = downPosition;
-                endPositionV3[2] = normalPosition;
-                endPositionV3[3] = normalPosition;
+                if ((rotator.transform.eulerAngles.y >= 345 & rotator.transform.eulerAngles.y <= 360) || (rotator.transform.eulerAngles.y >= 0 & rotator.transform.eulerAngles.y < 75))
+                {
+                    endPosition = Quaternion.Euler(0, 90, 0);
+                    endPositionV3[0] = downPosition;
+                    endPositionV3[1] = downPosition;
+                    endPositionV3[2] = normalPosition;
+                    endPositionV3[3] = normalPosition;
+                }
+                else if (rotator.transform.eulerAngles.y < 165 & rotator.transform.eulerAngles.y >= 75)
+                {
+                    endPosition = Quaternion.Euler(0, 180, 0);
+                    endPositionV3[0] = normalPosition;
+                    endPositionV3[1] = downPosition;
+                    endPositionV3[2] = downPosition;
+                    endPositionV3[3] = normalPosition;
+                }
+                else if (rotator.transform.eulerAngles.y < 255 & rotator.transform.eulerAngles.y >= 165)
+                {
+                    endPosition = Quaternion.Euler(0, 270, 0);
+                    endPositionV3[0] = normalPosition;
+                    endPositionV3[1] = normalPosition;
+                    endPositionV3[2] = downPosition;
+                    endPositionV3[3] = downPosition;
+                }
+                else
+                {
+                    endPosition = Quaternion.Euler(0, 360, 0);
+                    endPositionV3[0] = downPosition;
+                    endPositionV3[1] = normalPosition;
+                    endPositionV3[2] = normalPosition;
+                    endPositionV3[3] = downPosition;
+                }
             }
-            else if (rotator.transform.eulerAngles.y < 165 & rotator.transform.eulerAngles.y >= 75)
-            {
-                endPosition = Quaternion.Euler(0, 180, 0);
-                endPositionV3[0] = normalPosition;
-                endPositionV3[1] = downPosition;
-                endPositionV3[2] = downPosition;
-                endPositionV3[3] = normalPosition;
-            }
-            else if (rotator.transform.eulerAngles.y < 255 & rotator.transform.eulerAngles.y >= 165)
-            {
-                endPosition = Quaternion.Euler(0, 270, 0);
-                endPositionV3[0] = normalPosition;
-                endPositionV3[1] = normalPosition;
-                endPositionV3[2] = downPosition;
-                endPositionV3[3] = downPosition;
-            }
-            else
-            {
-                endPosition = Quaternion.Euler(0, 360, 0);
-                endPositionV3[0] = downPosition;
-                endPositionV3[1] = normalPosition;
-                endPositionV3[2] = normalPosition;
-                endPositionV3[3] = downPosition;
-            }
-        }
 
-        if (RightSwipe())
-        {
-            if (rotator.transform.eulerAngles.y <= 105 & rotator.transform.eulerAngles.y > 15)
+            if (RightSwipe())
             {
-                endPosition = Quaternion.Euler(0, 0, 0);
-                endPositionV3[0] = downPosition;
-                endPositionV3[1] = normalPosition;
-                endPositionV3[2] = normalPosition;
-                endPositionV3[3] = downPosition;
+                if (rotator.transform.eulerAngles.y <= 105 & rotator.transform.eulerAngles.y > 15)
+                {
+                    endPosition = Quaternion.Euler(0, 0, 0);
+                    endPositionV3[0] = downPosition;
+                    endPositionV3[1] = normalPosition;
+                    endPositionV3[2] = normalPosition;
+                    endPositionV3[3] = downPosition;
+                }
+                else if (rotator.transform.eulerAngles.y <= 195 & rotator.transform.eulerAngles.y > 95)
+                {
+                    endPosition = Quaternion.Euler(0, 90, 0);
+                    endPositionV3[0] = downPosition;
+                    endPositionV3[1] = downPosition;
+                    endPositionV3[2] = normalPosition;
+                    endPositionV3[3] = normalPosition;
+                }
+                else if (rotator.transform.eulerAngles.y <= 285 & rotator.transform.eulerAngles.y > 195)
+                {
+                    endPosition = Quaternion.Euler(0, 180, 0);
+                    endPositionV3[0] = normalPosition;
+                    endPositionV3[1] = downPosition;
+                    endPositionV3[2] = downPosition;
+                    endPositionV3[3] = normalPosition;
+                }
+                else
+                {
+                    endPosition = Quaternion.Euler(0, 270, 0);
+                    endPositionV3[0] = normalPosition;
+                    endPositionV3[1] = normalPosition;
+                    endPositionV3[2] = downPosition;
+                    endPositionV3[3] = downPosition;
+                }
             }
-            else if (rotator.transform.eulerAngles.y <= 195 & rotator.transform.eulerAngles.y > 95)
-            {
-                endPosition = Quaternion.Euler(0, 90, 0);
-                endPositionV3[0] = downPosition;
-                endPositionV3[1] = downPosition;
-                endPositionV3[2] = normalPosition;
-                endPositionV3[3] = normalPosition;
-            }
-            else if (rotator.transform.eulerAngles.y <= 285 & rotator.transform.eulerAngles.y > 195)
-            {
-                endPosition = Quaternion.Euler(0, 180, 0);
-                endPositionV3[0] = normalPosition;
-                endPositionV3[1] = downPosition;
-                endPositionV3[2] = downPosition;
-                endPositionV3[3] = normalPosition;
-            }
-            else
-            {
-                endPosition = Quaternion.Euler(0, 270, 0);
-                endPositionV3[0] = normalPosition;
-                endPositionV3[1] = normalPosition;
-                endPositionV3[2] = downPosition;
-                endPositionV3[3] = downPosition;
-            }
-        }
 
-        if (rotator.transform.rotation != endPosition)
-        {
-            rotator.transform.rotation = Quaternion.Slerp(rotator.transform.rotation, endPosition, Time.deltaTime * rotationSpeed);
+            if (rotator.transform.rotation != endPosition)
+            {
+                rotator.transform.rotation = Quaternion.Slerp(rotator.transform.rotation, endPosition, Time.deltaTime * rotationSpeed);
+            }
         }
+        
 
         if (Wols[0].transform.position != endPositionV3[0])
         {
