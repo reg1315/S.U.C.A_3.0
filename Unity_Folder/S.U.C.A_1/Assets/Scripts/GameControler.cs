@@ -8,11 +8,13 @@ public class GameControler : MonoBehaviour
 
     public float rotationSpeed;
 
-    public GameObject[] Wols = new GameObject[4];
+    public GameObject[] Walls = new GameObject[4];
+
     private Vector3[] endPositionV3 = new Vector3[4];
     private Vector3[] endPositionV3normalizade = new Vector3[4];
-    private Vector3 downPosition;
-    private Vector3 normalPosition;
+
+    private Vector3[] downPosition = new Vector3[4];
+    private Vector3[] normalPosition = new Vector3[4];
 
     private Vector2 startPos;
     private Vector3 startCameraPos;
@@ -24,30 +26,37 @@ public class GameControler : MonoBehaviour
 
     public GameObject rotator;
 
-    public void Up()
+    public void normalizade()
     {
-        for (int i = 0; i < 4; i++)
-            endPositionV3normalizade[i] = endPositionV3[i];
-
-        for (int i = 0; i < 4; i++)
-            endPositionV3[i] = normalPosition;
+        for (int i = 0; i < Walls.Length; i++)
+            endPositionV3[i] = endPositionV3normalizade[i];
     }
 
-    public void normalizade() 
+    public void Up()
     {
-        for (int i = 0; i < 4; i++)
-            endPositionV3[i] = endPositionV3normalizade[i];
+        for (int i = 0; i < Walls.Length; i++)
+            endPositionV3normalizade[i] = endPositionV3[i];
+
+        for (int i = 0; i < Walls.Length; i++)
+            endPositionV3[i] = normalPosition[i];
     }
 
     void Start()
     {
-        normalPosition = Vector3.zero;
-        downPosition = new Vector3(0, down, 0);
+        for (int i = 0; i < Walls.Length; i++)
+            normalPosition[i] = Walls[i].transform.position;
 
-        endPositionV3[0] = downPosition;
-        endPositionV3[1] = normalPosition;
-        endPositionV3[2] = normalPosition;
-        endPositionV3[3] = downPosition;
+        for (int i = 0; i < Walls.Length; i++)
+        {
+            downPosition[i] = normalPosition[i];
+            downPosition[i].y +=down;
+        }
+
+        endPositionV3[0] = downPosition[0];
+        endPositionV3[1] = normalPosition[1];
+        endPositionV3[2] = normalPosition[2];
+        endPositionV3[3] = downPosition[3];
+
     }
 
     void Update()
@@ -65,34 +74,34 @@ public class GameControler : MonoBehaviour
                 if ((rotator.transform.eulerAngles.y >= 345 & rotator.transform.eulerAngles.y <= 360) || (rotator.transform.eulerAngles.y >= 0 & rotator.transform.eulerAngles.y < 75))
                 {
                     endPosition = Quaternion.Euler(0, 90, 0);
-                    endPositionV3[0] = downPosition;
-                    endPositionV3[1] = downPosition;
-                    endPositionV3[2] = normalPosition;
-                    endPositionV3[3] = normalPosition;
+                    endPositionV3[0] = downPosition[0];
+                    endPositionV3[1] = downPosition[1];
+                    endPositionV3[2] = normalPosition[2];
+                    endPositionV3[3] = normalPosition[3];
                 }
                 else if (rotator.transform.eulerAngles.y < 165 & rotator.transform.eulerAngles.y >= 75)
                 {
                     endPosition = Quaternion.Euler(0, 180, 0);
-                    endPositionV3[0] = normalPosition;
-                    endPositionV3[1] = downPosition;
-                    endPositionV3[2] = downPosition;
-                    endPositionV3[3] = normalPosition;
+                    endPositionV3[0] = normalPosition[0];
+                    endPositionV3[1] = downPosition[1];
+                    endPositionV3[2] = downPosition[2];
+                    endPositionV3[3] = normalPosition[3];
                 }
                 else if (rotator.transform.eulerAngles.y < 255 & rotator.transform.eulerAngles.y >= 165)
                 {
                     endPosition = Quaternion.Euler(0, 270, 0);
-                    endPositionV3[0] = normalPosition;
-                    endPositionV3[1] = normalPosition;
-                    endPositionV3[2] = downPosition;
-                    endPositionV3[3] = downPosition;
+                    endPositionV3[0]  = normalPosition[0];
+                    endPositionV3[1] = normalPosition[1];
+                    endPositionV3[2] = downPosition[2];
+                    endPositionV3[3] = downPosition[3];
                 }
                 else
                 {
                     endPosition = Quaternion.Euler(0, 360, 0);
-                    endPositionV3[0] = downPosition;
-                    endPositionV3[1] = normalPosition;
-                    endPositionV3[2] = normalPosition;
-                    endPositionV3[3] = downPosition;
+                    endPositionV3[0] = downPosition[0];
+                    endPositionV3[1] = normalPosition[1];
+                    endPositionV3[2] = normalPosition[2];
+                    endPositionV3[3] = downPosition[3];
                 }
             }
 
@@ -101,34 +110,34 @@ public class GameControler : MonoBehaviour
                 if (rotator.transform.eulerAngles.y <= 105 & rotator.transform.eulerAngles.y > 15)
                 {
                     endPosition = Quaternion.Euler(0, 0, 0);
-                    endPositionV3[0] = downPosition;
-                    endPositionV3[1] = normalPosition;
-                    endPositionV3[2] = normalPosition;
-                    endPositionV3[3] = downPosition;
+                    endPositionV3[0] = downPosition[0];
+                    endPositionV3[1] = normalPosition[1];
+                    endPositionV3[2] = normalPosition[2];
+                    endPositionV3[3] = downPosition[3];
                 }
                 else if (rotator.transform.eulerAngles.y <= 195 & rotator.transform.eulerAngles.y > 95)
                 {
                     endPosition = Quaternion.Euler(0, 90, 0);
-                    endPositionV3[0] = downPosition;
-                    endPositionV3[1] = downPosition;
-                    endPositionV3[2] = normalPosition;
-                    endPositionV3[3] = normalPosition;
+                    endPositionV3[0] = downPosition[0];
+                    endPositionV3[1] = downPosition[1];
+                    endPositionV3[2] = normalPosition[2];
+                    endPositionV3[3] = normalPosition[3];
                 }
                 else if (rotator.transform.eulerAngles.y <= 285 & rotator.transform.eulerAngles.y > 195)
                 {
                     endPosition = Quaternion.Euler(0, 180, 0);
-                    endPositionV3[0] = normalPosition;
-                    endPositionV3[1] = downPosition;
-                    endPositionV3[2] = downPosition;
-                    endPositionV3[3] = normalPosition;
+                    endPositionV3[0] = normalPosition[0];
+                    endPositionV3[1] = downPosition[1];
+                    endPositionV3[2] = downPosition[2];
+                    endPositionV3[3] = normalPosition[3];
                 }
                 else
                 {
                     endPosition = Quaternion.Euler(0, 270, 0);
-                    endPositionV3[0] = normalPosition;
-                    endPositionV3[1] = normalPosition;
-                    endPositionV3[2] = downPosition;
-                    endPositionV3[3] = downPosition;
+                    endPositionV3[0] = normalPosition[0];
+                    endPositionV3[1] = normalPosition[1];
+                    endPositionV3[2] = downPosition[2];
+                    endPositionV3[3] = downPosition[3];
                 }
             }
 
@@ -139,21 +148,21 @@ public class GameControler : MonoBehaviour
         }
         
 
-        if (Wols[0].transform.position != endPositionV3[0])
+        if (Walls[0].transform.position != endPositionV3[0])
         {
-            Wols[0].transform.position = Vector3.Lerp(Wols[0].transform.position, endPositionV3[0], speed * Time.deltaTime);
+            Walls[0].transform.position = Vector3.Lerp(Walls[0].transform.position, endPositionV3[0], speed * Time.deltaTime);
         }
-        if (Wols[1].transform.position != endPositionV3[1])
+        if (Walls[1].transform.position != endPositionV3[1])
         {
-            Wols[1].transform.position = Vector3.Lerp(Wols[1].transform.position, endPositionV3[1], speed * Time.deltaTime);
+            Walls[1].transform.position = Vector3.Lerp(Walls[1].transform.position, endPositionV3[1], speed * Time.deltaTime);
         }
-        if (Wols[2].transform.position != endPositionV3[2])
+        if (Walls[2].transform.position != endPositionV3[2])
         {
-            Wols[2].transform.position = Vector3.Lerp(Wols[2].transform.position, endPositionV3[2], speed * Time.deltaTime);
+            Walls[2].transform.position = Vector3.Lerp(Walls[2].transform.position, endPositionV3[2], speed * Time.deltaTime);
         }
-        if (Wols[3].transform.position != endPositionV3[3])
+        if (Walls[3].transform.position != endPositionV3[3])
         {
-            Wols[3].transform.position = Vector3.Lerp(Wols[3].transform.position, endPositionV3[3], speed * Time.deltaTime);
+            Walls[3].transform.position = Vector3.Lerp(Walls[3].transform.position, endPositionV3[3], speed * Time.deltaTime);
         }
     }
 

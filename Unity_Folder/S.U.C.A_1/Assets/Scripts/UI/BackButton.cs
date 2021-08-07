@@ -5,6 +5,6 @@ public class BackButton : MonoBehaviour
 {
     public void Back()
     {
-        SceneManager.LoadScene("MainMany");
+        SceneManager.LoadSceneAsync("MainMany", LoadSceneMode.Single);
     }
 }

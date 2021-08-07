@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &719287765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2146246347396835935, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
+  m_PrefabInstance: {fileID: 761452403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761452403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +183,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SUCA_level_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1356398939555569358, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111744006652328822, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5958438921693756439, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
       propertyPath: m_Range
       value: 10
@@ -188,26 +201,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
---- !u!1 &761452404 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8097348836687155376, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
-  m_PrefabInstance: {fileID: 761452403}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &761452405 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5861652777228956610, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
-  m_PrefabInstance: {fileID: 761452403}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &761452406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3718227951799731066, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
-  m_PrefabInstance: {fileID: 761452403}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &761452407 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -1272859044247359508, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
-  m_PrefabInstance: {fileID: 761452403}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &838788922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,6 +263,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3038059797300711416, guid: aca3d9b0367dff54d800cb665fb5a987, type: 3}
   m_PrefabInstance: {fileID: 838788922}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &838788924 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3038059798250798047, guid: aca3d9b0367dff54d800cb665fb5a987, type: 3}
+  m_PrefabInstance: {fileID: 838788922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &932045257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4534659307295406624, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
+  m_PrefabInstance: {fileID: 761452403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1365924945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,6 +330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dddbc53b74ea434a90d11c10d375cae, type: 3}
+--- !u!1 &1368976574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 236787926078480753, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
+  m_PrefabInstance: {fileID: 761452403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1621191057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,19 +410,35 @@ PrefabInstance:
     - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
       propertyPath: Wols.Array.data[0]
       value: 
-      objectReference: {fileID: 761452405}
+      objectReference: {fileID: 932045257}
     - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
       propertyPath: Wols.Array.data[1]
       value: 
-      objectReference: {fileID: 761452407}
+      objectReference: {fileID: 1368976574}
     - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
       propertyPath: Wols.Array.data[2]
       value: 
-      objectReference: {fileID: 761452406}
+      objectReference: {fileID: 2004173273}
     - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
       propertyPath: Wols.Array.data[3]
       value: 
-      objectReference: {fileID: 761452404}
+      objectReference: {fileID: 719287765}
+    - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
+      propertyPath: Walls.Array.data[0]
+      value: 
+      objectReference: {fileID: 932045257}
+    - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
+      propertyPath: Walls.Array.data[1]
+      value: 
+      objectReference: {fileID: 1368976574}
+    - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
+      propertyPath: Walls.Array.data[2]
+      value: 
+      objectReference: {fileID: 2004173273}
+    - target: {fileID: 2500480320428562265, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
+      propertyPath: Walls.Array.data[3]
+      value: 
+      objectReference: {fileID: 719287765}
     - target: {fileID: 2500480320428562266, guid: 3d257b8a40227be4989edb13eb6fded9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -468,6 +492,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6212476571345684282, guid: f05247c11e5848a4fb6ef1fd0036de47, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 838788924}
     - target: {fileID: 6212476571345684283, guid: f05247c11e5848a4fb6ef1fd0036de47, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -558,3 +586,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f05247c11e5848a4fb6ef1fd0036de47, type: 3}
+--- !u!1 &2004173273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7666137577573364999, guid: 75449785eb7e6b240916104c99bbdbf7, type: 3}
+  m_PrefabInstance: {fileID: 761452403}
+  m_PrefabAsset: {fileID: 0}
