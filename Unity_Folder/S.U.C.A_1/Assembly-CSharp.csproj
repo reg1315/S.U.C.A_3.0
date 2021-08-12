@@ -56,13 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Assets\level_1\scripts\MoveTheObject.cs" />
-    <Compile Include="Assets\level_1\scripts\ObjectRotate.cs" />
-    <Compile Include="Assets\level_1\scripts\CameraRotateAround.cs" />
-    <Compile Include="Assets\level_1\scripts\GameControler.cs" />
-    <Compile Include="Assets\level_3\scripts\Orol.cs" />
-    <Compile Include="Assets\level_1\scripts\ShowMe.cs" />
     <Compile Include="Assets\LvLs\level_1\scripts\SafeSkript\Verification.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\LvLs\level_1\scripts\SafeSkript\SafeDor.cs" />
@@ -94,6 +87,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\CameraRotateAround.cs" />
     <Compile Include="Assets\Scripts\GameControler.cs" />
+    <Compile Include="Assets\Scripts\CameraMoveArouand.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\LvLs\level_3\scripts\Orol.cs" />
     <Compile Include="Assets\Scripts\LightSwich.cs" />
@@ -111,10 +105,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\CameraMoveArouand.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Sprites\sprites\fonts\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
