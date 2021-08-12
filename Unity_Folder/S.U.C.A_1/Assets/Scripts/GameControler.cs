@@ -9,6 +9,7 @@ public class GameControler : MonoBehaviour
     public float rotationSpeed;
 
     public GameObject[] Walls = new GameObject[4];
+    public MeshCollider[] WallsMesh = new MeshCollider[4];
 
     private Vector3[] endPositionV3 = new Vector3[4];
     private Vector3[] endPositionV3normalizade = new Vector3[4];
@@ -148,22 +149,15 @@ public class GameControler : MonoBehaviour
         }
         
 
-        if (Walls[0].transform.position != endPositionV3[0])
-        {
-            Walls[0].transform.position = Vector3.Lerp(Walls[0].transform.position, endPositionV3[0], speed * Time.deltaTime);
-        }
-        if (Walls[1].transform.position != endPositionV3[1])
-        {
-            Walls[1].transform.position = Vector3.Lerp(Walls[1].transform.position, endPositionV3[1], speed * Time.deltaTime);
-        }
-        if (Walls[2].transform.position != endPositionV3[2])
-        {
-            Walls[2].transform.position = Vector3.Lerp(Walls[2].transform.position, endPositionV3[2], speed * Time.deltaTime);
-        }
-        if (Walls[3].transform.position != endPositionV3[3])
-        {
-            Walls[3].transform.position = Vector3.Lerp(Walls[3].transform.position, endPositionV3[3], speed * Time.deltaTime);
-        }
+        for (int i = 0; i < Walls.Length; i++)
+            if (Walls[i].transform.position != endPositionV3[i])
+            {
+                Walls[i].transform.position = Vector3.Lerp(Walls[i].transform.position, endPositionV3[i], speed * Time.deltaTime);
+                if (Walls[i].transform.position != normalPosition[i])
+                    WallsMesh[i].enabled = false;
+                else
+                    WallsMesh[i].enabled = true;
+            }
     }
 
     bool LeftSwipe()

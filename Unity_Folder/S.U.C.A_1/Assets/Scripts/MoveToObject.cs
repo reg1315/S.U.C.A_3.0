@@ -9,7 +9,14 @@ public class MoveToObject : MonoBehaviour,IPointerClickHandler
 
     private bool oneclic = false;
 
-    public bool cameraRotate = true;
+    public enum NextSteps
+    {
+        None,
+        Rotate,
+        Move
+    }
+
+    public NextSteps nextStep = NextSteps.None;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!oneclic)
@@ -17,9 +24,9 @@ public class MoveToObject : MonoBehaviour,IPointerClickHandler
             CameraFirstPos = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y, MainCamera.transform.position.z);
 
             ShowMeCamera.Default();
-            ShowMeCamera.target = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            ShowMeCamera.target = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
             ShowMeCamera.Blook = true;
-            cameraRotateAround.target = gameObject.transform;
+           
 
 
             gamecontroler.muveaccess = false;
@@ -36,6 +43,7 @@ public class MoveToObject : MonoBehaviour,IPointerClickHandler
     public ShowMe ShowMeCamera;
     public PhysicsRaycaster PhysicsRaycasterCamera;
     public CameraRotateAround cameraRotateAround;
+    public CameraMoveArouand cameraMoveArouand;
 
     private Vector3 CameraFirstPos;
     private Vector3 CameraEndPos;
@@ -48,7 +56,7 @@ public class MoveToObject : MonoBehaviour,IPointerClickHandler
 
     void Start()
     {
-        CameraEndPos = new Vector3(transform.position.x + x, transform.position.y, transform.position.z);
+        CameraEndPos = new Vector3(transform.position.x + x, transform.position.y + y, transform.position.z + z);
 
     }
 
@@ -75,9 +83,29 @@ public class MoveToObject : MonoBehaviour,IPointerClickHandler
             Bescape = true;
             Bmovetoheobject = false;
 
-            cameraRotateAround.bRotate = cameraRotate;
-            //cameraRotateAround.X = MainCamera.transform.localEulerAngles.y;
-            //cameraRotateAround.Y = MainCamera.transform.localEulerAngles.x;
+            switch (nextStep)
+            {
+                case NextSteps.Move:
+                    cameraRotateAround.bRotate = false;
+                    cameraMoveArouand.bMuve = true;
+                    ShowMeCamera.Blook = false;
+                    cameraRotateAround.target = transform;
+                    cameraMoveArouand.target = transform;
+                    break;
+                case NextSteps.Rotate:
+                    cameraRotateAround.bRotate = true;
+                    cameraMoveArouand.bMuve = false;
+                    cameraRotateAround.target = transform;
+                    cameraMoveArouand.target = transform;
+                    break;
+                case NextSteps.None:
+                    cameraRotateAround.bRotate = false;
+                    cameraMoveArouand.bMuve = false;
+                    cameraRotateAround.target = transform;
+                    cameraMoveArouand.target = transform;
+                    break;
+
+            }
         }
     }
 
@@ -104,6 +132,7 @@ public class MoveToObject : MonoBehaviour,IPointerClickHandler
         {
             PhysicsRaycasterCamera.enabled = false;
             cameraRotateAround.bRotate = false;
+            cameraMoveArouand.bMuve = false;
 
             gamecontroler.normalizade();
 

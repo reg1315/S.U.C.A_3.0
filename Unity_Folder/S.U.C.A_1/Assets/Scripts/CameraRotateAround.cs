@@ -42,7 +42,7 @@ public class CameraRotateAround : MonoBehaviour
 	{
 		if (bRotate) Rotate();
 	}
-	
+
 	private void Rotate()
     {
 		//Zoom to PC
@@ -54,7 +54,7 @@ public class CameraRotateAround : MonoBehaviour
 		if (Input.touchCount == 2) Zoom();
 
 		//Rotation to SmartPhone device
-		if (Input.touchCount > 0)
+		if (Input.touchCount == 1)
 		{
 			var touch = Input.GetTouch(0);
 			
@@ -67,44 +67,47 @@ public class CameraRotateAround : MonoBehaviour
 
 				case TouchPhase.Moved:
 					var dir = touch.position - startPos;
+					startPos = touch.position;
 					X = startCameraPos.y + dir.x * sensivity;
 					Y = startCameraPos.x - dir.y * sensivity;
-					//Y = Mathf.Clamp(Y, -limit, limit);
-					transform.localEulerAngles = new Vector3(Y, X, 0);
+
+					Y = Mathf.Clamp(Y, -90, limit);
+					transform.localEulerAngles =  new Vector3(Y, X, 0);
 					transform.position = transform.parent.rotation * transform.localRotation * offset + target.position;
+					startCameraPos = transform.localEulerAngles;
 					break;
 			}
 		}
 
-		//Вирівнювання (Не знаю як буде на англ якщо хтось знає напишіть в лапках)
-		RaycastHit hit;
-		Debug.DrawLine(target.position, transform.position, Color.blue);
-		if (Physics.Linecast(target.position, transform.position, out hit))
-		{
-			float tempDistance = Vector3.Distance(target.position, hit.point);
+        //Вирівнювання (Не знаю як буде на англ якщо хтось знає напишіть в лапках)
+        RaycastHit hit;
+        Debug.DrawLine(target.position, transform.position, Color.blue);
+        if (Physics.Linecast(target.position, transform.position, out hit))
+        {
+            float tempDistance = Vector3.Distance(target.position, hit.point);
             if (tempDistance == zoomMin)
             {
 
-			}
-            else if (tempDistance < zoomMin - 0.05f)
+            }
+            else if (tempDistance < zoomMin)
             {
-				transform.position = new Vector3(Mathf.Clamp(transform.position.x, ClampX, ClampX), Mathf.Clamp(transform.position.y, ClampY, ClampY), Mathf.Clamp(transform.position.z, ClampZ, ClampZ));
-				transform.rotation = ClampRotation;
-				Debug.DrawLine(target.position, transform.position, Color.red);
-			}
+                transform.position = new Vector3(Mathf.Clamp(transform.position.x, ClampX, ClampX), Mathf.Clamp(transform.position.y, ClampY, ClampY), Mathf.Clamp(transform.position.z, ClampZ, ClampZ));
+                transform.rotation = ClampRotation;
+                Debug.DrawLine(target.position, transform.position, Color.red);
+            }
             else
             {
-				Vector3 pos = target.position - (transform.rotation * Vector3.forward * tempDistance);
-				transform.position = new Vector3(pos.x, pos.y + 0.02f, pos.z); // сдвиг позиции в точку контакта
+                Vector3 pos = target.position - (transform.rotation * Vector3.forward * tempDistance);
+                transform.position = new Vector3(pos.x, pos.y + 0.02f, pos.z); // сдвиг позиции в точку контакта
 
-				ClampX = transform.position.x;
-				ClampY = transform.position.y;
-				ClampZ = transform.position.z;
+                ClampX = transform.position.x;
+                ClampY = transform.position.y;
+                ClampZ = transform.position.z;
 
-				ClampRotation = transform.rotation;
-			}
+                ClampRotation = transform.rotation;
+            }
         }
-	}
+    }
 	private void Zoom()
 	{
 		Vector2 finger1 = Input.GetTouch(0).position;
