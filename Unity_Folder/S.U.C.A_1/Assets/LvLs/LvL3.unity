@@ -478,6 +478,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1071359958148435772, guid: 8a8aa6bf8ae2a9d40b54eed2f2bfd335, type: 3}
       propertyPath: m_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -1071359958148435772, guid: 8a8aa6bf8ae2a9d40b54eed2f2bfd335, type: 3}
+      propertyPath: m_Intensity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8a8aa6bf8ae2a9d40b54eed2f2bfd335, type: 3}
