@@ -105,6 +105,13 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\LvLs\TestLevel\NevScripts\GameController.cs" />
+    <Compile Include="Assets\LvLs\TestLevel\NevScripts\CameraControl.cs" />
+    <Compile Include="Assets\LvLs\TestLevel\NevScripts\IControlToDo.cs" />
+    <Compile Include="Assets\LvLs\TestLevel\NevScripts\WallControll.cs" />
+    <Compile Include="Assets\LvLs\TestLevel\NevScripts\FingerControl.cs" />
+    <Compile Include="Assets\LvLs\TestLevel\NevScripts\CaybourdControl.cs" />
+    <Compile Include="Assets\LvLs\TestLevel\NevScripts\AllScale.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
