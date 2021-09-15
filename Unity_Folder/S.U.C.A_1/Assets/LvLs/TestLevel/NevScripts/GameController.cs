@@ -13,7 +13,8 @@ public class GameController : MonoBehaviour
     public ControlType myController;
 
     private IControlToDo iController;
-    private FingerControl fingerControl;
+    private FingerControl fingerControl = new FingerControl();
+    private CaybourdControl caybourdControl = new CaybourdControl();
 
     public CameraControl mainCamera;
 
@@ -30,5 +31,6 @@ public class GameController : MonoBehaviour
     private void ControlTypeSelection()
     {
         if (myController == ControlType.Finger_Control) iController = fingerControl;
+        else if (myController == ControlType.Ceybourd_Control) iController = caybourdControl;
     }
 }

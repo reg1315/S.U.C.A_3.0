@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IControlToDo
+public interface IControlToDo // Інтерфейс який описує що можна буде робити в грі
 {
-    public void Left(GameObject rotator);
+    public bool LeftSwipe(GameObject rotator);  // перевірка на те чи вліво напралений свайп
 
-    public void Right(GameObject rotator);
+    public bool RightSwipe(GameObject rotator); // перевірка на те чи вправо напралений свайп
 
-    public void ZoomIn();
+    public void Zoom(); // приближення віддалення
 
-    public void ZoomOut();
+    public bool CenIMove(); // запит чи можна рухти обєкт (використовується перед Left Right Move)
 
-    public bool CenIMove(); // запит чи можна рухти обєкт (використовується для Left Right Move)
-
-    public void Move(); // рухає
+    public void Move(GameObject rotator);   // рухає
 }
