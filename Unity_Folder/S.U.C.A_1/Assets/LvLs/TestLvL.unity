@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &18025223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2834361089172138422, guid: 8c5f068a8caa5214f8fd23ff57945b20, type: 3}
+  m_PrefabInstance: {fileID: 188169841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &85482894
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 85482895}
+  - component: {fileID: 85482896}
   m_Layer: 0
   m_Name: CenterOfCameraRotate
   m_TagString: Untagged
@@ -155,6 +161,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &85482896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85482894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7492553fce956af40a30c3e26489cd89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  wallsController: {fileID: 1067908968}
+  rotationSpeed: 7
 --- !u!1001 &188169841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,6 +233,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c5f068a8caa5214f8fd23ff57945b20, type: 3}
+--- !u!1 &641351838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3131457635434330465, guid: 8c5f068a8caa5214f8fd23ff57945b20, type: 3}
+  m_PrefabInstance: {fileID: 188169841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &677607176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7281535937995345191, guid: 8c5f068a8caa5214f8fd23ff57945b20, type: 3}
+  m_PrefabInstance: {fileID: 188169841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1003642659
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +283,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1027787415}
   - component: {fileID: 1027787416}
-  - component: {fileID: 1027787417}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -268,7 +298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027787414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4768101, y: 0.2710204, z: -0.19810224}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -283,23 +313,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1027787414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57773f1cf58e2b948bae6eb2132b6c3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bea97631d383ba4fb0c220b40bdf0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myController: 0
-  mainCamera: {fileID: 1529027909}
---- !u!114 &1027787417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027787414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d2a3ddda9f28b8438130bd4721ddeac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  typeController: 0
+  mainCamera: {fileID: 0}
 --- !u!1001 &1060951972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403,8 +421,47 @@ PrefabInstance:
       propertyPath: m_PlaneDistance
       value: 0.31
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5272690943112345011, guid: ceb2672ff1e77f54c8830f5c856f35d8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ceb2672ff1e77f54c8830f5c856f35d8, type: 3}
+--- !u!1 &1067908964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6267408858438777040, guid: 8c5f068a8caa5214f8fd23ff57945b20, type: 3}
+  m_PrefabInstance: {fileID: 188169841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1067908968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067908964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9871d2de95be1fa478953b5bc8158938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPositionV3:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  downPosition:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  normalPosition:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  Walls:
+  - {fileID: 18025223}
+  - {fileID: 641351838}
+  - {fileID: 2140047548}
+  - {fileID: 677607176}
+  down: -2
 --- !u!1001 &1324450039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,6 +618,8 @@ MonoBehaviour:
   CameraRotateScale: 10
   WallMoowingSpeedScale: 14
   rotator: {fileID: 0}
+  endRotatorPos: {x: 0, y: 0, z: 0, w: 0}
+  wallController: {fileID: 0}
 --- !u!1001 &1876881252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -618,3 +677,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a9c1d7eb6ba49049aea2832fd2b401d, type: 3}
+--- !u!1 &2140047548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8347531291394123439, guid: 8c5f068a8caa5214f8fd23ff57945b20, type: 3}
+  m_PrefabInstance: {fileID: 188169841}
+  m_PrefabAsset: {fileID: 0}

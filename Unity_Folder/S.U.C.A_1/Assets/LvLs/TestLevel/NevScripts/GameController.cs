@@ -2,35 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ControlType
+enum TypeController
 {
-    Finger_Control,
-    Ceybourd_Control
+    Caybourd,
+    Finger
 }
 
 public class GameController : MonoBehaviour
-{ 
-    public ControlType myController;
+{
+    private IController icontroller;
+    private CaybourdController caybourd = new CaybourdController();
+    private FingerCintroller finger = new FingerCintroller();
 
-    private IControlToDo iController;
-    private FingerControl fingerControl = new FingerControl();
-    private CaybourdControl caybourdControl = new CaybourdControl();
+    [SerializeField] private TypeController typeController = TypeController.Finger;
+    [Space]
+    [SerializeField] private CameraController mainCamera;
 
-    public CameraControl mainCamera;
-
-    private void Start()
+    void Start()
     {
-        ControlTypeSelection();
+        mainCamera = GameObject.Find("CenterOfCameraRotate").GetComponent<CameraController>();
+        ControlType();
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        mainCamera.CameraController(iController);
+        mainCamera.Controller(icontroller);
     }
 
-    private void ControlTypeSelection()
+    private void ControlType()
     {
-        if (myController == ControlType.Finger_Control) iController = fingerControl;
-        else if (myController == ControlType.Ceybourd_Control) iController = caybourdControl;
+        if (typeController == TypeController.Finger)
+            icontroller = finger;
+        else if (typeController == TypeController.Caybourd)
+            icontroller = caybourd;
     }
 }
