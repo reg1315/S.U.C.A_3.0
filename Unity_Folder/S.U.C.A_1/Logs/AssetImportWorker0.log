@@ -249,3 +249,4 @@ Received Import Request.
 Start importing Assets/Scenes/soundFX/soundFX/Plastic_button_fast.mp3 using Guid(e62b4beea2fdb7148a174bb150d9fb12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '722f6f72eca2fbc30bb2c71bb3722aae') in 0.006127 seconds
   Import took 0.008628 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
