@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     {
         endRotatorPos = transform.rotation;
 
-        camera = transform.GetChild(1);
+        camera = transform.GetChild(0);
         camera.GetComponent<Animation>().Play();
 
         StartCoroutine(ToStartLvL());
@@ -90,7 +90,7 @@ public class CameraController : MonoBehaviour
     public bool bRotateAroundLvL = false;
     [Space]
     [SerializeField] private WallsController wallsController;
-    [SerializeField] private float rotationSpeed = 1f;  //  Відповідає за швидкість повороту камери навколо рівня
+    [SerializeField] private float rotationSpeed = 14f;  //  Відповідає за швидкість повороту камери навколо рівня
 
     private void RotateAroundLvL(IController icontroller)   //  система повороту камери навколо рівня
     {
