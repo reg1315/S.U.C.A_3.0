@@ -45,9 +45,6 @@ public class CameraController : MonoBehaviour
             RotateAround(icontroller);
         else if (gmObjToMove != null && MainLier == CameraControllerLyer.LierMoveInSpace)
             MoveInSpace(icontroller);
-
-        
-        
     }
 
 
@@ -211,14 +208,20 @@ public class CameraController : MonoBehaviour
     private void MoveInSpace(IController icontroller)   //  Рух камери в площинні яка обмежена певними гранями(значеннями X,Y)
     {
         float speed = 0.01f;
-        float limitX = gameObject.GetComponent<OnClic>().limit.x;
-        float limitY = gameObject.GetComponent<OnClic>().limit.y;
+        float limitX = gmObjToMove.GetComponent<OnClic>().limit.x;
+        float limitY = gmObjToMove.GetComponent<OnClic>().limit.y;
 
-        camera.Translate(icontroller.Move(speed).x, icontroller.Move(speed).y, 0);
+        float X, Y;
+        X = icontroller.Move(speed).x;
+        Y = icontroller.Move(speed).y;
 
-        
-        Vector3 offset = gameObject.transform.position + gameObject.GetComponent<OnClic>().offset;
-        camera.position = new Vector3(Mathf.Clamp(camera.position.x, /*offset.x - limitX*/-1, /*offset.x + limitX*/1), Mathf.Clamp(camera.position.y, /*offset.y - limitY*/-2, /*offset.y + limitY*/2),camera.position.z);
+        camera.Translate(new Vector3(X, Y, 0) * Time.deltaTime, Space.Self);
+
+        Vector3 offset = gmObjToMove.transform.position + gmObjToMove.GetComponent<OnClic>().offset;
+        X = Mathf.Clamp(camera.localPosition.x, offset.x - limitX, offset.x + limitX);
+        Y = Mathf.Clamp(camera.localPosition.y, offset.y - limitY, offset.y + limitY);
+
+        camera.position = new Vector3(X, Y, camera.localPosition.z);
     }
 
     public IEnumerator ToStartLvL()    // псевдо приближення при старті гри

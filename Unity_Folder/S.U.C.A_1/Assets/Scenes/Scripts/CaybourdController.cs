@@ -23,13 +23,13 @@ public class CaybourdController : MonoBehaviour, IController
         Vector2 vector = new Vector2(0, 0);
 
         if (Input.GetKey(KeyCode.D))
-            vector.x += speed;
+            vector.x += 1;
         if (Input.GetKey(KeyCode.A))
-            vector.x -= speed;
+            vector.x -= 1;
         if (Input.GetKey(KeyCode.W))
-            vector.y += speed;
+            vector.y += 1;
         if (Input.GetKey(KeyCode.S))
-            vector.y -= speed;
+            vector.y -= 1;
 
         return vector;
     }
