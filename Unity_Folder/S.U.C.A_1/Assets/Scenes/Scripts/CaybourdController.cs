@@ -18,20 +18,20 @@ public class CaybourdController : MonoBehaviour, IController
         return false;
     }
 
-    public Vector2 Move(float speed)
+    public Vector2 Move()
     {
-        Vector2 vector = new Vector2(0, 0);
+        Vector2 vect = new Vector2(0, 0);
 
         if (Input.GetKey(KeyCode.D))
-            vector.x += 1;
+            vect.x += 1;
         if (Input.GetKey(KeyCode.A))
-            vector.x -= 1;
+            vect.x -= 1;
         if (Input.GetKey(KeyCode.W))
-            vector.y += 1;
+            vect.y += 1;
         if (Input.GetKey(KeyCode.S))
-            vector.y -= 1;
+            vect.y -= 1;
 
-        return vector;
+        return vect;
     }
 
     public bool Right()

@@ -27,7 +27,7 @@ public class FingerCintroller : MonoBehaviour, IController
         return false;
     }
 
-    public Vector2 Move(float speed)
+    public Vector2 Move()
     {
         throw new System.NotImplementedException();
     }
