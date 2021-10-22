@@ -188,10 +188,9 @@ public class CameraController : MonoBehaviour
         else
             limitY = gmObjToMove.GetComponent<OnClic>().limit.y;
 
-        camera.RotateAround(gmObjToMove.localPosition, camera.right ,icontroller.Move().y*speed);
-        camera.RotateAround(gmObjToMove.localPosition, Vector3.up, -icontroller.Move().x*speed);
+        camera.RotateAround(gmObjToMove.position, camera.right ,icontroller.Move().y*speed);
+        camera.RotateAround(gmObjToMove.position, Vector3.up, -icontroller.Move().x*speed);
 
-        Ray ray = new Ray(gmObjToMove.position, camera.position);
         Debug.DrawRay(gmObjToMove.position,camera.position,Color.red);
 
         RotateAroandNormalizade(camera,limitY);  
@@ -201,7 +200,7 @@ public class CameraController : MonoBehaviour
 
     private void MoveInSpace(IController icontroller)   //  Рух камери в площинні яка обмежена певними гранями(значеннями X,Y)
     {
-        float speed = 0.01f;
+        //float speed = 0.01f;
 
         float X = icontroller.Move().x;
         float Y = icontroller.Move().y;
@@ -214,8 +213,8 @@ public class CameraController : MonoBehaviour
         Vector3 offset = gmObjToMove.transform.position + gmObjToMove.GetComponent<OnClic>().offset;
 
         Vector2 barier;
-        barier.x = Mathf.Clamp(camera.InverseTransformVector(camera.position).x, offset.x - limitX, offset.x + limitX);
-        barier.y = Mathf.Clamp(camera.InverseTransformVector(camera.position).y, offset.y - limitY, offset.y + limitY);
+        barier.x = Mathf.Clamp(camera.InverseTransformVector(camera.position).x, camera.InverseTransformVector(offset).x - limitX, camera.InverseTransformVector(offset).x + limitX);
+        barier.y = Mathf.Clamp(camera.InverseTransformVector(camera.position).y, camera.InverseTransformVector(offset).y - limitY, camera.InverseTransformVector(offset).y + limitY);
 
         //if (Input.GetKeyDown(KeyCode.Space))
         //{
@@ -224,13 +223,26 @@ public class CameraController : MonoBehaviour
         //    Debug.Log("barier.x : " + barier.x + " barier.y : " + barier.y);
         //}
         
-        camera.position = Vector3.Lerp(camera.position, camera.position + camera.right*(barier.x - camera.InverseTransformVector(camera.position).x) + camera.up * (barier.y - camera.InverseTransformVector(camera.position).y), 20 * Time.deltaTime);
+        camera.position = Vector3.Lerp(camera.position, 
+                                       camera.position + camera.right*(barier.x - camera.InverseTransformVector(camera.position).x) + camera.up * (barier.y - camera.InverseTransformVector(camera.position).y),    //  Пізда сложна було
+                                       20 * Time.deltaTime);
+        //Debug.Log("barier.x : " + barier.x);
+        //Debug.Log(camera.InverseTransformVector(camera.position).x);
+        //Debug.Log("offset.x - limitX : " + (offset.x - limitX));
+        //Debug.Log("offset.x + limitX : " + (offset.x + limitX));
+        Debug.Log(gmObjToMove.transform.position);
+        Debug.Log(gmObjToMove.GetComponent<OnClic>().offset);
     }
 
     private void RotateAroandNormalizade(Transform camera, float limity)
     {
-        float x = Mathf.Clamp(camera.rotation.eulerAngles.x, -limity, limity);
-        camera.rotation = Quaternion.Euler(x, camera.rotation.eulerAngles.y, camera.rotation.eulerAngles.z);
+        float x = Mathf.Clamp(camera.eulerAngles.x, -limity, limity);
+
+        Debug.Log(camera.TransformDirection(camera.eulerAngles + camera.right * (x - camera.InverseTransformVector(camera.eulerAngles).x)));
+        Debug.Log(x);
+        Debug.Log(limity);
+       
+        camera.rotation = Quaternion.Euler(camera.TransformDirection(camera.rotation.eulerAngles + camera.right * (x - camera.InverseTransformVector(camera.eulerAngles).x)));
     }
 
     public IEnumerator ToStartLvL()    // псевдо приближення при старті гри
