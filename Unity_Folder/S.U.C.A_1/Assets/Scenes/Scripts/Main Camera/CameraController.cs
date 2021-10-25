@@ -7,7 +7,12 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform camera;  //  Змінна самої камери яка є в середені батьківського елемента CenterOfCameraRotate
 
-    private void Start()
+    private void Awake()
+    {
+        if (PlayerPrefs.HasKey("StartRotation"))
+            transform.rotation = Quaternion.Euler(new Vector3(0, PlayerPrefs.GetFloat("StartRotation"), 0));
+    }
+    void Start()
     {
         endRotatorPos = transform.rotation;
 
@@ -16,7 +21,6 @@ public class CameraController : MonoBehaviour
 
         StartCoroutine(ToStartLvL());
     }
-    
 
     public CameraControllerLyer MainLier;   //  зберігає поточний шар можливостей контролю камери
     public CameraControllerLyer NextLier;   //  Зберігає наступний шар який стане головним
@@ -46,7 +50,6 @@ public class CameraController : MonoBehaviour
         else if (gmObjToMove != null && MainLier == CameraControllerLyer.LierMoveInSpace)
             MoveInSpace(icontroller);
     }
-
 
     [Space] //  змінні для руху до обєкту
     public Transform gmObjToMove;
@@ -163,7 +166,9 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        if (transform.rotation != endRotatorPos || wallsController.Walls[0].transform.position != wallsController.endPositionV3[0])    //  Поворот камери навколо рівня
+        if (transform.rotation != endRotatorPos || 
+            wallsController.Walls[0].transform.position != wallsController.endPositionV3[0] ||
+            wallsController.Walls[2].transform.position != wallsController.endPositionV3[2])    //  Поворот камери навколо рівня
         {
             if (new Comparison().CheckRange(transform.rotation, endRotatorPos.eulerAngles) && new Comparison().CheckRange(wallsController.Walls[0].transform.position, wallsController.endPositionV3[0]))
             {
@@ -172,7 +177,6 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Зациклення");
                 transform.rotation = Quaternion.Slerp(transform.rotation, endRotatorPos, rotationSpeed * Time.deltaTime);
                 wallsController.WallsNormalizade(rotationSpeed);
             }

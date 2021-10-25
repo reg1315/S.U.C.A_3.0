@@ -65,11 +65,13 @@
     <Compile Include="Assets\Scenes\Scripts\MyLibrary.cs" />
     <Compile Include="Assets\levels\opt_level\level_1\scripts\ClickReceiver.cs" />
     <Compile Include="Assets\Scenes\Scripts\Main Camera\CameraController.cs" />
+    <Compile Include="Assets\Scenes\Scripts\OnOf.cs" />
     <Compile Include="Assets\levels\opt_level\level_1\scripts\GameControler.cs" />
     <Compile Include="Assets\Scenes\Scripts\IController.cs" />
+    <Compile Include="Assets\levels\non_opt_level\MainMeny\scripts\RotateAroundlvl.cs" />
     <Compile Include="Assets\Scenes\Scripts\FingerCintroller.cs" />
     <Compile Include="Assets\Scenes\Scripts\CaybourdController.cs" />
-    <Compile Include="Assets\Scenes\Scripts\OnOf.cs" />
+    <Compile Include="Assets\levels\non_opt_level\MainMeny\scripts\MainManyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scenes\fonts\OFL.txt" />
