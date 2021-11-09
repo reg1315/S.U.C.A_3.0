@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scenes\Scripts\GameController.cs" />
     <Compile Include="Assets\Scenes\Scripts\OnClic.cs" />
     <Compile Include="Assets\levels\opt_level\level_1\scripts\MoveToTheObject.cs" />
+    <Compile Include="Assets\levels\non_opt_level\MainMeny\scripts\MainManyController.cs" />
     <Compile Include="Assets\levels\opt_level\level_1\scripts\MoveTheObject.cs" />
     <Compile Include="Assets\Scenes\Scripts\WallsController.cs" />
     <Compile Include="Assets\Scenes\Scripts\AllValue.cs" />
@@ -71,7 +72,7 @@
     <Compile Include="Assets\levels\non_opt_level\MainMeny\scripts\RotateAroundlvl.cs" />
     <Compile Include="Assets\Scenes\Scripts\FingerCintroller.cs" />
     <Compile Include="Assets\Scenes\Scripts\CaybourdController.cs" />
-    <Compile Include="Assets\levels\non_opt_level\MainMeny\scripts\MainManyController.cs" />
+    <Compile Include="Assets\levels\non_opt_level\MainMeny\scripts\Levels\ChoiceLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scenes\fonts\OFL.txt" />

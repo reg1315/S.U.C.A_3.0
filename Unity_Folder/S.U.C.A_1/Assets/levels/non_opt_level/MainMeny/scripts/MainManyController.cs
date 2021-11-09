@@ -33,40 +33,45 @@ public class MainManyController : MonoBehaviour
     {
         levelOnBackFons = allLevels[passedLevels];
         levelOnBackFons.tag = "Level";
+        levelOnBackFons.GetComponentInChildren<WallsController>().WallsNormalizade();
         Instantiate(levelOnBackFons);
     }
 
     private enum MenuLier
     {
+        Continue,
         MainMenu,
         Levels,
-        Setings
+        Setings,
+        Back
     }
     private MenuLier lier = MenuLier.MainMenu;
+    private MenuLier nextLier = MenuLier.MainMenu;
 
     private void Update()
     {
-        if (continueb)
-            Continue();
-
-        switch (lier)
-        {
-            case MenuLier.MainMenu:
-                Bac();
-                break;
-            case MenuLier.Levels:
-                Levels();
-                break;
-            case MenuLier.Setings:
-                break;
-        }
+        if(lier != nextLier)
+            switch (nextLier)
+            {
+                case MenuLier.Continue:
+                    Continue();
+                    break;
+                case MenuLier.Levels:
+                    Levels();
+                    break;
+                case MenuLier.Setings:
+                    break;
+                case MenuLier.MainMenu:
+                    Bac();
+                    break;
+            }
     }
 
-    private bool continueb = false;
+
     public void Continue()
     {
-        if (!continueb)
-            continueb = true;
+        if (nextLier != MenuLier.Continue)
+            nextLier = MenuLier.Continue;
 
         DisappearanceMany();
         GoToStartPosition();
@@ -82,6 +87,7 @@ public class MainManyController : MonoBehaviour
         MainCamera.transform.localPosition = Vector3.Lerp(MainCamera.transform.localPosition, endCameraPosition, speed * Time.deltaTime);
         MainCamera.transform.localRotation = Quaternion.Lerp(MainCamera.transform.localRotation, Quaternion.Euler(endCameraRotation), speed * Time.deltaTime);
 
+
         if (CenterOfCameraRotate.transform.rotation.eulerAngles.y > 1 & CenterOfCameraRotate.transform.rotation.eulerAngles.y <= 91)
             endCameraRotatorRotation = new Vector3(0, 90, 0);
         else if (CenterOfCameraRotate.transform.rotation.eulerAngles.y <= 181 & CenterOfCameraRotate.transform.rotation.eulerAngles.y > 91)
@@ -90,6 +96,7 @@ public class MainManyController : MonoBehaviour
             endCameraRotatorRotation = new Vector3(0, 270, 0);
         else if (CenterOfCameraRotate.transform.rotation.eulerAngles.y > 271 & CenterOfCameraRotate.transform.rotation.eulerAngles.y <= 361)
             endCameraRotatorRotation = new Vector3(0, 360, 0);
+
 
         CenterOfCameraRotate.transform.rotation = Quaternion.Lerp(CenterOfCameraRotate.transform.rotation, Quaternion.Euler(endCameraRotatorRotation), speed * Time.deltaTime);
     }
@@ -104,40 +111,54 @@ public class MainManyController : MonoBehaviour
 
     public void Levels()
     {
-        if (lier != MenuLier.Levels)
-            lier = MenuLier.Levels;
+        if (nextLier != MenuLier.Levels)
+            nextLier = MenuLier.Levels;
         DisappearanceMany();
     }
 
     public void Setings()
     {
-        if (lier != MenuLier.Setings)
-            lier = MenuLier.Setings;
+        if (nextLier != MenuLier.Setings)
+            nextLier = MenuLier.Setings;
         AppearanceMany();
     }
 
     public void Bac()
     {
-        if (lier != MenuLier.MainMenu)
-            lier = MenuLier.MainMenu;
+        if (nextLier != MenuLier.MainMenu)
+        {
+            nextLier = MenuLier.MainMenu;
+            lier = MenuLier.Back;
+        }
+            
         AppearanceMany();
     }
 
-    [Header("DisappearanceMany")]
-    public Image disappearanceManyColor;
+    [Header("Disappearance and AppearanceMany Many")]
+    public GameObject disappearanceMany;
     public float disappearanceSpead;
     private void DisappearanceMany()
     {
-        Debug.Log(disappearanceManyColor.color.a);
-        if (disappearanceManyColor.color.a > 0)
-            disappearanceManyColor.color = new Color(disappearanceManyColor.color.r, disappearanceManyColor.color.g, disappearanceManyColor.color.b, (disappearanceManyColor.color.a*255 - disappearanceSpead)/255);
-        else
-            disappearanceManyColor.color = new Color(disappearanceManyColor.color.r, disappearanceManyColor.color.g, disappearanceManyColor.color.b,0);
-        Debug.Log(disappearanceManyColor.color.a);
+        if (disappearanceMany.GetComponent<Image>().color.a*255 > 0)
+            disappearanceMany.GetComponent<Image>().color = new Color(disappearanceMany.GetComponent<Image>().color.r, disappearanceMany.GetComponent<Image>().color.g, disappearanceMany.GetComponent<Image>().color.b, (disappearanceMany.GetComponent<Image>().color.a*255 - disappearanceSpead)/255);
+        else if (nextLier != lier)
+        {
+            disappearanceMany.GetComponent<Image>().color = new Color(disappearanceMany.GetComponent<Image>().color.r, disappearanceMany.GetComponent<Image>().color.g, disappearanceMany.GetComponent<Image>().color.b, 0);
+            if (nextLier != MenuLier.Continue)
+                lier = nextLier;
+            disappearanceMany.SetActive(false);
+        }
     }   //  плавне зникнення головного меню
 
     private void AppearanceMany()
     {
+        if (disappearanceMany.GetComponent<Image>().color.a * 255 < 255)
+            disappearanceMany.GetComponent<Image>().color = new Color(disappearanceMany.GetComponent<Image>().color.r, disappearanceMany.GetComponent<Image>().color.g, disappearanceMany.GetComponent<Image>().color.b, (disappearanceMany.GetComponent<Image>().color.a * 255 + disappearanceSpead) / 255);
+        else if (nextLier != lier)
+        {
+            disappearanceMany.GetComponent<Image>().color = new Color(disappearanceMany.GetComponent<Image>().color.r, disappearanceMany.GetComponent<Image>().color.g, disappearanceMany.GetComponent<Image>().color.b, 1);
+            lier = nextLier;
 
+        }
     }   //  плавна поява головного меню
 }
