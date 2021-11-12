@@ -3,6 +3,7 @@ using MyLibrary;
 using System.Collections;
 using System;
 
+[ExecuteAlways]
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform camera;  //  Змінна самої камери яка є в середені батьківського елемента CenterOfCameraRotate
@@ -33,7 +34,7 @@ public class CameraController : MonoBehaviour
             if (icontroller.Back())
             {
                 wallsController.WallsNormalizade(); //  нормаліую стіни моментально
-                gmObjToMove.GetComponent<OnClic>().clic = false;
+                gmObjToMove.GetComponent<MuveTo>().clic = false;
                 gmObjToMove = null;
                 
             }
@@ -54,15 +55,17 @@ public class CameraController : MonoBehaviour
     [Space] //  змінні для руху до обєкту
     public Transform gmObjToMove;
     public bool bMoveTo = false;
+    [Range(0, 1)]
+    public float t;
     private void MoveTo()    //  Рух камери до обєкта(target) на який було нажато
      {
-        camera.position = Vector3.Lerp(camera.position, gmObjToMove.position + gmObjToMove.GetComponent<OnClic>().offset, 10*Time.deltaTime);
-        camera.LookAt(gmObjToMove);
-        if (camera.position == gmObjToMove.position + gmObjToMove.GetComponent<OnClic>().offset)
-        {
-            MainLier = NextLier;    //  набір дозволів
-        }
-     } 
+        camera.position = Bizue.GetPoint(gmObjToMove.GetComponent<MuveTo>().target, gmObjToMove.GetComponent<MuveTo>().p2.position, gmObjToMove.GetComponent<MuveTo>().p3.position, gmObjToMove.transform.position + gmObjToMove.GetComponent<MuveTo>().offset, t);
+        camera.LookAt(Bizue.GetLoocPoint(transform.position + Vector3.up*0.66f,gmObjToMove.position,t));
+        //if (camera.position == gmObjToMove.position + gmObjToMove.GetComponent<MuveTo>().offset)
+        //{
+        //    MainLier = NextLier;    //  набір дозволів
+        //}
+    } 
 
 
     private void Back()   // повернення камери на першопочаткову точку навколо рівня
@@ -187,10 +190,10 @@ public class CameraController : MonoBehaviour
     {
         float speed = 0.3f;
         float limitY;
-        if (gmObjToMove.GetComponent<OnClic>().limit.y == 0)
+        if (gmObjToMove.GetComponent<MuveTo>().limit.y == 0)
             limitY = 90;
         else
-            limitY = gmObjToMove.GetComponent<OnClic>().limit.y;
+            limitY = gmObjToMove.GetComponent<MuveTo>().limit.y;
 
         camera.RotateAround(gmObjToMove.position, camera.right ,icontroller.Move().y*speed);
         camera.RotateAround(gmObjToMove.position, Vector3.up, -icontroller.Move().x*speed);
@@ -204,38 +207,23 @@ public class CameraController : MonoBehaviour
 
     private void MoveInSpace(IController icontroller)   //  Рух камери в площинні яка обмежена певними гранями(значеннями X,Y)
     {
-        //float speed = 0.01f;
-
         float X = icontroller.Move().x;
         float Y = icontroller.Move().y;
 
         camera.Translate(new Vector3(X, Y, 0) * Time.deltaTime, Space.Self);
         
-        float limitX = gmObjToMove.GetComponent<OnClic>().limit.x;
-        float limitY = gmObjToMove.GetComponent<OnClic>().limit.y;
+        float limitX = gmObjToMove.GetComponent<MuveTo>().limit.x;
+        float limitY = gmObjToMove.GetComponent<MuveTo>().limit.y;
 
-        Vector3 offset = gmObjToMove.transform.position + gmObjToMove.GetComponent<OnClic>().offset;
+        Vector3 offset = gmObjToMove.transform.position + gmObjToMove.GetComponent<MuveTo>().offset;
 
         Vector2 barier;
         barier.x = Mathf.Clamp(camera.InverseTransformVector(camera.position).x, camera.InverseTransformVector(offset).x - limitX, camera.InverseTransformVector(offset).x + limitX);
         barier.y = Mathf.Clamp(camera.InverseTransformVector(camera.position).y, camera.InverseTransformVector(offset).y - limitY, camera.InverseTransformVector(offset).y + limitY);
 
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Debug.Log("InverseTransformVector : " + camera.InverseTransformVector(camera.position));
-        //    Debug.Log("Normal : " + camera.position);
-        //    Debug.Log("barier.x : " + barier.x + " barier.y : " + barier.y);
-        //}
-        
         camera.position = Vector3.Lerp(camera.position, 
                                        camera.position + camera.right*(barier.x - camera.InverseTransformVector(camera.position).x) + camera.up * (barier.y - camera.InverseTransformVector(camera.position).y),    //  Пізда сложна було
                                        20 * Time.deltaTime);
-        //Debug.Log("barier.x : " + barier.x);
-        //Debug.Log(camera.InverseTransformVector(camera.position).x);
-        //Debug.Log("offset.x - limitX : " + (offset.x - limitX));
-        //Debug.Log("offset.x + limitX : " + (offset.x + limitX));
-        Debug.Log(gmObjToMove.transform.position);
-        Debug.Log(gmObjToMove.GetComponent<OnClic>().offset);
     }
 
     private void RotateAroandNormalizade(Transform camera, float limity)
