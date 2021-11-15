@@ -3,7 +3,6 @@ using MyLibrary;
 using System.Collections;
 using System;
 
-[ExecuteAlways]
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform camera;  //  Змінна самої камери яка є в середені батьківського елемента CenterOfCameraRotate
@@ -17,7 +16,7 @@ public class CameraController : MonoBehaviour
     {
         endRotatorPos = transform.rotation;
 
-        camera = transform.GetChild(0);
+        camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
         camera.GetComponent<Animation>().Play();
 
         StartCoroutine(ToStartLvL());
@@ -35,8 +34,6 @@ public class CameraController : MonoBehaviour
             {
                 wallsController.WallsNormalizade(); //  нормаліую стіни моментально
                 gmObjToMove.GetComponent<MuveTo>().clic = false;
-                gmObjToMove = null;
-                
             }
 
             Back();
@@ -55,36 +52,61 @@ public class CameraController : MonoBehaviour
     [Space] //  змінні для руху до обєкту
     public Transform gmObjToMove;
     public bool bMoveTo = false;
-    [Range(0, 1)]
-    public float t;
+    [Range(0,0.5f)]
+    public float speed;
+
+    private float t = 0;
+    private float alpha=0;
     private void MoveTo()    //  Рух камери до обєкта(target) на який було нажато
      {
-        camera.position = Bizue.GetPoint(gmObjToMove.GetComponent<MuveTo>().target, gmObjToMove.GetComponent<MuveTo>().p2.position, gmObjToMove.GetComponent<MuveTo>().p3.position, gmObjToMove.transform.position + gmObjToMove.GetComponent<MuveTo>().offset, t);
+        t = Mathf.Sin(alpha/180*Mathf.PI);
+        camera.position = Bizue.GetPoint(gmObjToMove.GetComponent<MuveTo>().target, 
+                                         gmObjToMove.GetComponent<MuveTo>().p2.position, 
+                                         gmObjToMove.GetComponent<MuveTo>().p3.position, 
+                                         gmObjToMove.transform.position + gmObjToMove.GetComponent<MuveTo>().offset, 
+                                         t);
         camera.LookAt(Bizue.GetLoocPoint(transform.position + Vector3.up*0.66f,gmObjToMove.position,t));
-        //if (camera.position == gmObjToMove.position + gmObjToMove.GetComponent<MuveTo>().offset)
-        //{
-        //    MainLier = NextLier;    //  набір дозволів
-        //}
-    } 
+        if (camera.position == gmObjToMove.position + gmObjToMove.GetComponent<MuveTo>().offset)
+        {
+            MainLier = NextLier;    //  набір дозволів
+        }
 
+        alpha += speed;
+        alpha = Mathf.Clamp(alpha,0,90);
+    }
 
     private void Back()   // повернення камери на першопочаткову точку навколо рівня
-    {  
-        if (new Comparison().CheckRange(camera.localPosition, new Vector3(3.6f, 3.6f, 3.6f), new Vector3(0.05f, 0.05f, 0.05f)) && new Comparison().CheckRange(camera.localRotation, new Vector3(30, 225, 0), new Vector3(0.05f, 0.05f, 0.05f)))
-        {
-            camera.localPosition = new Vector3(3.6f, 3.6f, 3.6f);               //  вказую що камера має зайняти таке положення
-            camera.localRotation = Quaternion.Euler(new Vector3(30, 225, 0));   //
+    {
+        //if (new Comparison().CheckRange(camera.localPosition, new Vector3(3.6f, 3.6f, 3.6f), new Vector3(0.05f, 0.05f, 0.05f)) && new Comparison().CheckRange(camera.localRotation, new Vector3(30, 225, 0), new Vector3(0.05f, 0.05f, 0.05f)))
+        //{
+        //    camera.localPosition = new Vector3(3.6f, 3.6f, 3.6f);               //  вказую що камера має зайняти таке положення
+        //    camera.localRotation = Quaternion.Euler(new Vector3(30, 225, 0));   //
 
-            /*------------------------------------------  Набір дозволів  --*/
-            MainLier = CameraControllerLyer.Lier0;
-        }
-        else
+        //    /*------------------------------------------  Набір дозволів  --*/
+        //    MainLier = CameraControllerLyer.Lier0;
+        //}
+        //else
+        //{
+        //    /*--------------------------------------------------------------------------------------------------------------  повернення в сторону центра при поверненні в початкове положення  --*/
+        //    camera.localPosition = Vector3.Lerp(camera.localPosition, new Vector3(3.6f, 3.6f, 3.6f), 10 * Time.deltaTime);
+        //    camera.LookAt(new Vector3(0, 0.66f, 0));
+        //    //camera.localRotation = Quaternion.Slerp(camera.localRotation, Quaternion.Euler(new Vector3(30, camera.localRotation.eulerAngles.y, camera.localRotation.eulerAngles.z)), rotationSpeed * Time.deltaTime);
+        //}
+        t = Mathf.Sin(alpha / 180 * Mathf.PI);
+        camera.position = Bizue.GetPoint(gmObjToMove.GetComponent<MuveTo>().target,
+                                         gmObjToMove.GetComponent<MuveTo>().p2.position,
+                                         gmObjToMove.GetComponent<MuveTo>().p3.position,
+                                         gmObjToMove.transform.position + gmObjToMove.GetComponent<MuveTo>().offset,
+                                         t);
+        camera.LookAt(Bizue.GetLoocPoint(transform.position + Vector3.up * 0.66f, gmObjToMove.position, t));
+        if (camera.position == gmObjToMove.GetComponent<MuveTo>().target)
         {
-            /*--------------------------------------------------------------------------------------------------------------  повернення в сторону центра при поверненні в початкове положення  --*/
-            camera.localPosition = Vector3.Lerp(camera.localPosition, new Vector3(3.6f, 3.6f, 3.6f), 10 * Time.deltaTime);
-            camera.LookAt(new Vector3(0, 0.66f, 0));
-            //camera.localRotation = Quaternion.Slerp(camera.localRotation, Quaternion.Euler(new Vector3(30, camera.localRotation.eulerAngles.y, camera.localRotation.eulerAngles.z)), rotationSpeed * Time.deltaTime);
+            MainLier = CameraControllerLyer.Lier0;
+            gmObjToMove = null;
         }
+
+        alpha -= speed;
+        alpha = Mathf.Clamp(alpha, 0, 90);
     }
 
 

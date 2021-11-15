@@ -18,10 +18,14 @@ public class GameController : MonoBehaviour
     [Space]
     [SerializeField] private CameraController mainCamera;
 
+    private void Awake()
+    {
+        ControlType();
+    }
+
     void Start()
     {
         mainCamera = GameObject.Find("CenterOfCameraRotate").GetComponent<CameraController>();
-        ControlType();
     }
 
     void Update()

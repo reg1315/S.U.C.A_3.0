@@ -20,15 +20,12 @@ public class MuveTo : MonoBehaviour, IPointerClickHandler
     {
         centerOfCameraRotate = GameObject.Find("CenterOfCameraRotate").GetComponent<CameraController>();
         wallsController = GameObject.Find("floor").GetComponent<WallsController>();
-        p2 = transform.GetChild(0);
-        p3 = transform.GetChild(1);
+        if (p2 == null)
+            p2 = transform.GetChild(0);
+        if(p3 == null)
+            p3 = transform.GetChild(1);
     }
-
-    private void Update()
-    {
-        if(!clic)
-            target = centerOfCameraRotate.transform.GetChild(0).position;
-    }
+   
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!clic && centerOfCameraRotate.gmObjToMove == null)
